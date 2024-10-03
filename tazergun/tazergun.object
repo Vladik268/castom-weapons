@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/tazergun/tazergun" orientation_object="rp_wpn_fps_mel_nin" />
+	<graphics>
+		<object name="g_nin" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,266 @@
+<mod name="Sidewinder SMR" color="Color(0.643137255, 0.882352941, 0.952941176)" image="guis/dlcs/titanfall/textures/pd2/blackmarket/icons/weapons/sidewinder">
+	<Localization directory="localization" default="english.json"/>
+	<AssetUpdates id="32720" version="1.0.2" provider="modworkshop"/>
+
+	<GlobalValue id="titanfall" color="Color(0.643137255, 0.882352941, 0.952941176)" overwrite="true"/>
+
+	<!-- Base Attachments -->
+		<WeaponMod id="fps_at_sidewinder_body" type="body" global_value="titanfall" texture_bundle_folder="titanfall" based_on="wpn_fps_m4_lower_reciever" unit="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_body" hidden="true" ver="2">
+			<animations reload="reload" reload_not_empty="reload" fire="recoil" fire_steelsight="recoil"/>
+			<forbids>
+				<value_node value="wpn_fps_addon_ris"/>
+			</forbids>
+		</WeaponMod>
+
+		<WeaponMod id="fps_at_sidewinder_mag_plate" type="mag_plate" global_value="titanfall" texture_bundle_folder="titanfall" based_on="wpn_fps_m4_lower_reciever" unit="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_mag_plate" hidden="true" ver="2"/>
+
+		<WeaponMod id="fps_at_sidewinder_magazine" global_value="titanfall" texture_bundle_folder="titanfall" based_on="wpn_fps_m4_uupg_m_std_vanilla" unit="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_magazine" hidden="true" ver="2">
+			<animations reload="reload" reload_not_empty="reload" fire="recoil" fire_steelsight="recoil"/>
+			<bullet_objects amount="6" prefix="g_round_"/>
+
+			<adds>
+				<value_node value="fps_at_sidewinder_mag_plate"/>
+			</adds>
+		</WeaponMod>
+
+	<!-- Classic Attachments -->
+		<!-- <WeaponMod id="fps_at_sidewinder_classic_mag_plate" type="mag_plate" global_value="titanfall" texture_bundle_folder="titanfall" based_on="wpn_fps_m4_lower_reciever" unit="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_classic_mag_plate" hidden="true" ver="2"/>
+
+		<WeaponMod id="fps_at_sidewinder_classic_magazine" global_value="titanfall" texture_bundle_folder="titanfall" based_on="wpn_fps_m4_uupg_m_std_vanilla" unit="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_classic_magazine" ver="2">
+			<animations reload="reload" reload_not_empty="reload" fire="recoil" fire_steelsight="recoil"/>
+			<bullet_objects amount="6" prefix="g_round_"/>
+			<stats damage="-20"/>
+			<custom_stats clip_adder="5"/>
+
+			<adds>
+				<value_node value="fps_at_sidewinder_classic_mag_plate"/>
+			</adds>
+		</WeaponMod> -->
+
+	<Weapon unlock_level="45">
+		<weapon
+			id="sidewinder"
+			global_value="titanfall"
+			texture_bundle_folder="titanfall"
+			based_on="m249"
+			weapon_hold="sidewinder"
+			CLIP_AMMO_MAX="20" NR_CLIPS_MAX="3"
+			FIRE_MODE="auto"
+			shell_ejection="effects/payday2/particles/weapons/shells/shell_empty"
+			damage_falloff="false"
+		>
+			<AMMO_PICKUP>
+				<value_node value="0.5"/>
+				<value_node value="2.0"/>
+			</AMMO_PICKUP>
+
+			<fire_mode_data fire_rate="0.12"/>
+			<timers reload_not_empty="4.2" reload_empty="4.2" unequip="0.5" equip="0.8"/>
+
+			<sounds
+				fire="weapon_sidewinder_fire" 
+				fire_single="weapon_sidewinder_fire"
+				use_fix="true"
+				dryfire="weapon_sidewinder_dryfire"
+				enter_steelsight="weapon_sidewinder_ads_in"
+				leave_steelsight="weapon_sidewinder_ads_out"
+			/>
+
+			<categories>
+				<value_node value="grenade_launcher"/>
+			</categories>
+
+			<stats
+				zoom="1"
+				total_ammo_mod="21"
+				damage="100"
+				alert_size="7"
+				spread="17"
+				spread_moving="17"
+				recoil="21"
+				value="1"
+				extra_ammo="51"
+				reload="11"
+				suppression="20"
+				concealment="5"
+			/>
+
+			<kick>
+				<standing>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+				</standing>
+				<crouching>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+					<value_node value="0.2"/>
+				</crouching>
+				<steelsight>
+					<value_node value="0.1"/>
+					<value_node value="0.1"/>
+					<value_node value="0.1"/>
+					<value_node value="0.1"/>
+				</steelsight>
+			</kick>
+		</weapon>
+
+		<factory id="wpn_fps_at_sidewinder" unit="units/mods/weapons/wpn_fps_at_sidewinder/wpn_fps_at_sidewinder">
+			<animations reload="reload" reload_not_empty="reload"/>
+			<adds/>
+
+			<default_blueprint>
+				<value_node value="fps_at_sidewinder_body"/>
+				<value_node value="fps_at_sidewinder_magazine"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="fps_at_sidewinder_body"/>
+				<value_node value="fps_at_sidewinder_magazine"/>
+
+				<!--<value_node value="fps_at_sidewinder_classic_magazine"/>-->
+
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_peqbox"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_surefire"/>
+				<value_node value="wpn_fps_upg_fl_ass_peq15"/>
+				<value_node value="wpn_fps_upg_fl_ass_laser"/>
+				<value_node value="wpn_fps_upg_fl_ass_utg"/>
+			</uses_parts>
+		</factory>
+
+		<stance>
+			<standard>
+				<shoulders rotation="0 0 0 1" translation="0 0 0"/>
+			</standard>
+			<crouched>
+				<shoulders rotation="0 -0.358792 0 0.933417" translation="-6.4317 -11.8872 -14.2272"/>
+			</crouched>
+			<steelsight>
+				<shoulders rotation="0 -0.027441 0 1" translation="-2.2567 -17.5564 -1.1515"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+
+	<Sounds directory="sounds">
+		<sounds prefix="regular">
+			<sound id="weapon_sidewinder_fire"/>
+
+			<sounds directory="weapon_sidewinder_dryfire">
+				<sound id="weapon_sidewinder_dryfire_var1"/>
+				<sound id="weapon_sidewinder_dryfire_var2"/>
+
+				<random id="weapon_sidewinder_dryfire">
+					<sound id="weapon_sidewinder_dryfire_var1"/>
+					<sound id="weapon_sidewinder_dryfire_var2"/>
+				</random>
+			</sounds>
+
+			<sounds directory="weapon_sidewinder_ads_in">
+				<sound id="weapon_sidewinder_ads_in_var1"/>
+				<sound id="weapon_sidewinder_ads_in_var2"/>
+
+				<random id="weapon_sidewinder_ads_in">
+					<sound id="weapon_sidewinder_ads_in_var1"/>
+					<sound id="weapon_sidewinder_ads_in_var2"/>
+				</random>
+			</sounds>
+
+			<sounds directory="weapon_sidewinder_ads_out">
+				<sound id="weapon_sidewinder_ads_out_var1"/>
+				<sound id="weapon_sidewinder_ads_out_var2"/>
+
+				<random id="weapon_sidewinder_ads_out">
+					<sound id="weapon_sidewinder_ads_out_var1"/>
+					<sound id="weapon_sidewinder_ads_out_var2"/>
+				</random>
+			</sounds>
+		</sounds>
+
+		<sounds>
+			<prefixes>
+				<value_node value="first"/>
+				<value_node value="third"/>
+			</prefixes>
+
+			<sound id="weapon_sidewinder_reload_1"/>
+			<sound id="weapon_sidewinder_reload_2"/>
+			<sound id="weapon_sidewinder_reload_3a"/>
+			<sound id="weapon_sidewinder_reload_3b"/>
+			<sound id="weapon_sidewinder_reload_4"/>
+			<sound id="weapon_sidewinder_reload_5"/>
+			<sound id="weapon_sidewinder_reload_beeps"/>
+		</sounds>
+	</Sounds>
+
+	<Hooks directory="hooks">
+		<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdatapd2"/>
+		<hook file="MenuSceneManager.lua" source_file="lib/managers/menu/menuscenemanager"/>
+		<hook file="InventoryDescription.lua" source_file="lib/utils/inventorydescription"/>
+
+		<hook file="SMRDigitalGui.lua" source_file="lib/units/props/digitalgui"/>
+		<hook file="MenuSMRWeaponBase.lua" source_file="lib/units/weapons/menushotgunbase"/>
+		<hook file="SMRWeaponBase.lua" source_file="lib/units/weapons/projectileweaponbase"/>
+		<hook file="SMRGrenade.lua" source_file="lib/units/weapons/projectiles/projectilebase"/>
+	</Hooks>
+
+	<AddFiles directory="assets">
+		<!-- Animations -->
+			<animation path="anims/shared/special/criminal_idle_sidewinder"/>
+
+			<animation path="anims/fps/sidewinder/reload"/>
+			<animation path="anims/fps/sidewinder/idle"/>
+			<animation path="anims/fps/sidewinder/recoil"/>
+			<animation path="anims/fps/sidewinder/recoil_enter"/>
+			<animation path="anims/fps/sidewinder/recoil_loop"/>
+			<animation path="anims/fps/sidewinder/recoil_exit"/>
+			<animation path="anims/fps/sidewinder/equip"/>
+			<animation path="anims/fps/sidewinder/unequip"/>
+			<animation path="anims/fps/sidewinder/melee"/>
+			<animation path="anims/fps/sidewinder/melee_miss"/>
+			<animation path="anims/fps/sidewinder/use"/>
+			<animation path="anims/fps/sidewinder/sprint_enter"/>
+			<animation path="anims/fps/sidewinder/sprint"/>
+			<animation path="anims/fps/sidewinder/sprint_exit"/>
+			<animation path="anims/fps/sidewinder/com_down"/>
+			<animation path="anims/fps/sidewinder/com_stop"/>
+			<animation path="anims/fps/sidewinder/com_come"/>
+			<animation path="anims/fps/sidewinder/com_point"/>
+			<animation path="anims/fps/sidewinder/get_up"/>
+			<animation path="anims/fps/sidewinder/gogo"/>
+			<animation path="anims/fps/sidewinder/tased"/>
+			<animation path="anims/fps/sidewinder/tased_boost"/>
+			<animation path="anims/fps/sidewinder/tased_exit"/>
+			<animation path="anims/fps/sidewinder/inspect"/>
+
+			<animation path="anims/fps/sidewinder/reload_classic"/>
+
+		<!-- Textures -->
+			<texture path="guis/dlcs/titanfall/textures/pd2/blackmarket/icons/weapons/sidewinder"/>
+
+			<texture path="units/mods/weapons/wpn_fps_at_sidewinder_gui_textures/ammo_counter_base"/>
+			<texture path="units/mods/weapons/wpn_fps_at_sidewinder_gui_textures/ammo_counter_good"/>
+			<texture path="units/mods/weapons/wpn_fps_at_sidewinder_gui_textures/ammo_counter_warning"/>
+			<texture path="units/mods/weapons/wpn_fps_at_sidewinder_gui_textures/ammo_counter_danger"/>
+
+			<df_nm_cc_gsma path="units/mods/weapons/wpn_fps_at_sidewinder_pts/shared_textures/sidewinder"/>
+			<df_nm_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/shared_textures/sidewinder_classic"/>
+
+		<!-- Units -->
+			<!-- Base Unit -->
+				<unit_npc path="units/mods/weapons/wpn_fps_at_sidewinder/wpn_fps_at_sidewinder"/>
+
+			<!-- Attachments -->
+				<!-- Base -->
+					<unit_mat_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_body"/>
+					<unit_mat_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_mag_plate"/>
+					<unit_mat_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_magazine"/>
+
+				<!-- Classic -->
+					<unit_mat_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_classic_mag_plate"/>
+					<unit_mat_cc path="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_classic_magazine"/>
+
+			<!-- Projectile -->
+				<unit_mat path="units/mods/weapons/wpn_prj_at_sidewinder_explosive/wpn_prj_at_sidewinder_explosive"/>
+	</AddFiles>
+</mod>

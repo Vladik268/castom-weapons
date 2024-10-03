@@ -1,0 +1,12 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_mgjp" orientation_object="rp_blast"/>
+	<animations>
+        <animation_group name="reload">
+            <object name="anim_mag_reload" enabled="true"/>
+        </animation_group>
+    </animations>
+	<graphics>
+		<object name="g_mag" enabled="true"/>
+		<object name="g_battery" enabled="true"/>
+	</graphics>
+</dynamic_object>

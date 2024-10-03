@@ -1,0 +1,10 @@
+<materials version="3" group="weapon_saiga">
+	<material name="or12" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_shot_or12_pts/or12_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_shot_or12_pts/or12_nm" mip="1"/>
+    </material>
+	<material name="slug" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_shot_or12_pts/slug_df" mip="1"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_shot_r870_pts/slug_nm" mip="1"/>
+    </material>
+</materials>

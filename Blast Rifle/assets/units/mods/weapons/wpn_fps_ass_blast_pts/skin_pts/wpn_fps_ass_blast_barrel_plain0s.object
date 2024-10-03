@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_plain0s" orientation_object="rp_blast"/>
+	<graphics>
+		<object name="g_handguard" enabled="true"/>
+		<object name="g_handguard2" enabled="true"/>
+	</graphics>
+</dynamic_object>

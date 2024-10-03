@@ -1,0 +1,18 @@
+<materials version="3" group="weapon_group">
+	<material name="mat_pso1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_snp_vss_pts/textures/pso1_df" mip="1"/>
+		<bump_normal_texture file="units/mods/weapons/wpn_fps_snp_vss_pts/textures/pso1_nm" mip="1"/>
+	</material>
+    <material render_template="effect:DIFFUSE0_TEXTURE:VIEW_ANGLE_FALLOFF_OP" name="inside_scope" version="2">
+        <variable type="scalar" name="intensity" value="reddot"/>
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_upg_o_leupold/wpn_fps_upg_o_sight_df" mip="1"/>
+        <variable type="scalar" name="falloff_exp" value="0.01"/>
+    </material>
+	<material name="mat_lens_solid" decal_material="glass_breakable" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_snp_vss_pts/textures/lens_glass_df" mip="1"/>
+	</material>
+	<material name="mat_reticle" render_template="effect:DIFFUSE0_TEXTURE" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_snp_vss_pts/textures/pso1_reticle_df" mip="1"/>
+        <variable type="scalar" name="intensity" value="reddot"/>
+	</material>
+</materials>

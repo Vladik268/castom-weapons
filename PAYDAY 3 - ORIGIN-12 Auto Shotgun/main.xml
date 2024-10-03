@@ -1,0 +1,106 @@
+<mod name="PAYDAY 3 - ORIGIN-12 Auto Shotgun">
+	<Localization directory="loc" default="english.txt"/>
+	<AssetUpdates id="47464" version="3" provider="modworkshop"/>
+	<GlobalValue id="fiery_hylie_mod" color="Color(0.8, 0.7, 0.2)"/>
+	<AddFiles directory="assets" auto_generate="true"/>
+	<Hooks directory="Hooks">
+		<hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
+	</Hooks>
+
+	<!-- ORIGIN-12 Auto Shotgun - Parts -->
+
+	<WeaponMod id="wpn_fps_shot_or12_barrel" type="foregrip" based_on="wpn_upg_saiga_fg_standard" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_shot_or12_body" type="upper_reciever" based_on="wpn_fps_ass_74_body_upperreceiver" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_shot_or12_mag" type="magazine" based_on="wpn_fps_sho_sko12_m_drum" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_shot_or12_dh" type="drag_handle" based_on="wpn_fps_ak_bolt" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh" hidden="true" ver="2">
+		<animations magazine_empty="recoil" fire="recoil" fire_steelsight="recoil" reload="reload"/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_shot_or12_fl" type="gadget" based_on="wpn_fps_upg_fl_ass_smg_sho_surefire" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl" hidden="false" ver="2" global_value="fiery_hylie_mod">
+		<stats recoil="-1" concealment="0"/>
+		    <forbids>
+				<value_node value="wpn_fps_addon_ris"/>
+		    </forbids>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_shot_or12_sight" type="sight" based_on="wpn_fps_upg_o_reflex" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight" hidden="false" ver="2" global_value="fiery_hylie_mod"/>
+
+	<WeaponMod id="wpn_fps_shot_or12_vg" type="vertical_grip" based_on="wpn_fps_upg_vg_ass_smg_stubby" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_shot_or12_45steel" type="second_sight" based_on="wpn_fps_upg_o_45steel" unit="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel" hidden="true" ver="2"/>
+
+	<!-- ORIGIN-12 Auto Shotgun -->
+
+	<Weapon unlock_level="47">
+		<weapon id="or12" based_on="m249" weapon_hold="or12" has_description="true" desc_id="bm_w_or12_desc" damage_near="1000" damage_far="2000" rays="12" tactical_reload="1" texture_bundle_folder="mods" NR_CLIPS_MAX="3" CLIP_AMMO_MAX="32" muzzleflash="effects/payday2/particles/weapons/shotgun/sho_muzzleflash" shell_ejection="effects/payday2/particles/weapons/shells/shell_slug" global_value="fiery_hylie_mod">
+
+			<categories>
+				<value_node value="shotgun"/>
+			</categories>
+
+			<AMMO_PICKUP>
+				<value_node value="2.8"/>
+				<value_node value="5.2"/>
+			</AMMO_PICKUP>
+
+			<stats damage="65" spread="7" spread_moving="4" recoil="11" concealment="6"/>
+
+			<sounds fire="or12_fire" fire_auto="or12_fire" fire_single="or12_fire" use_fix="true"/>
+
+			<fire_mode_data fire_rate="0.1665"/>
+
+			<use_data selection_index="2" align_place="right_hand"/>
+
+			<timers reload_empty="3.60" reload_not_empty="3.10"/>
+
+			<animations reload="reload" reload_not_empty="reload_not_empty" reload_name_id="or12"/>
+
+		</weapon>
+		<factory id="wpn_fps_shot_or12" unit="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12">			
+		    <override>
+				<wpn_fps_shot_or12_45steel a_obj="a_o"/>
+		    </override>
+			<default_blueprint>
+				<value_node value="wpn_fps_shot_or12_barrel"/>
+				<value_node value="wpn_fps_shot_or12_body"/>
+				<value_node value="wpn_fps_shot_or12_mag"/>
+				<value_node value="wpn_fps_shot_or12_dh"/>
+				<value_node value="wpn_fps_shot_or12_fl"/>
+				<value_node value="wpn_fps_shot_or12_sight"/>
+				<value_node value="wpn_fps_shot_or12_vg"/>
+				<value_node value="wpn_fps_shot_or12_45steel"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_shot_or12_barrel"/>
+				<value_node value="wpn_fps_shot_or12_body"/>
+				<value_node value="wpn_fps_shot_or12_mag"/>
+				<value_node value="wpn_fps_shot_or12_dh"/>
+				<value_node value="wpn_fps_shot_or12_fl"/>
+				<value_node value="wpn_fps_shot_or12_sight"/>
+				<value_node value="wpn_fps_shot_or12_vg"/>
+				<value_node value="wpn_fps_shot_or12_45steel"/>
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="-0.000745315 0.00548101 0.00093835 -0.999984" translation="-2.036 8.157 -5.13"/>
+			</standard>
+			
+			<crouched>
+				<shoulders rotation="-0.000745315 0.00548101 0.00093835 -0.999984" translation="-1.036 3.343 -1.19"/>
+			</crouched>
+
+	        <steelsight>
+		        <shoulders rotation="-0.000775799 0.00548043 0.000152821 -0.999985" translation="-7.9 6.657 -0.7"/>
+	        </steelsight>
+		</stance>
+	</Weapon>
+	<Sounds directory="assets/sounds">
+		<sound id="or12_fire" path="or12_fire_1.ogg" prefix="regular"/>
+		<sound id="or12_fire" path="or12_fire_2.ogg" prefix="regular"/>
+		<sound id="or12_fire" path="or12_fire_3.ogg" prefix="regular"/>
+	</Sounds>
+</mod>

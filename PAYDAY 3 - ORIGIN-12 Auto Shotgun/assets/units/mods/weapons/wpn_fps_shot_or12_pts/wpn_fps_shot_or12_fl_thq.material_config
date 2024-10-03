@@ -1,0 +1,10 @@
+<materials version="3" group="weapon_surefire">
+    <material name="or12" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_shot_or12_pts/or12_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_shot_or12_pts/or12_nm" mip="1"/>
+    </material>
+    <material name="light" render_template="generic:SELF_ILLUMINATION" version="2">
+        <variable value="streetlight" type="scalar" name="il_multiplier"/>
+        <self_illumination_texture file="units/payday2/weapons/wpn_effects_textures/wpn_effect_flashlight_il"/>
+    </material>
+</materials>

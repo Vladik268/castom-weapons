@@ -1,0 +1,30 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_s7_scope_base" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_df"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_nm"/>
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_scope_rail" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_rail_df"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_rail_nm"/>
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_rail_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_scope_lower" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lower_df"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lower_nm"/>
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lower_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_scope_glass" material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE" decal_material="glass_breakable" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lens_df"/>
+        <reflection_texture type="matcap" file="units/pd2_dlc_lupus/materials/matcap_redwhite_df"/>
+    </material>
+	<material name="mtr_s7_ui_sight" render_template="generic:DEPTH_SCALING:DIFFUSE_TEXTURE:SELF_ILLUMINATION:SELF_ILLUMINATION_BLOOM" version="2">
+        <diffuse_texture 			file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_ui_df"/>
+        <self_illumination_texture  file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_ui_df"/>
+        <variable type="scalar" name="il_bloom" value="6.0070002853172"/>
+        <variable type="scalar" name="il_multiplier" value="reddot"/>
+    </material>
+</materials>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+
+		<!--
+			Replace all instances of 'malorian_3516' below with the ID of your animation.
+			Note that recoil_steelsight does not have a unique animation in this malorian_3516; you can edit the filepath in the 'file' section with one if you wish.
+			If your gun cannot be fired in full auto, you can delete the recoil_enter, recoil_loop, and recoil_exit lines.
+		-->
+
+		<target mode="attach">
+			<anim name="malorian_3516_reload" 			file="anims/fps/malorian_3516/malorian_3516_reload" blend_set="all"/>
+			<anim name="malorian_3516_reload_not_empty" 	file="anims/fps/malorian_3516/malorian_3516_reload_not_empty" blend_set="all"/>
+			<anim name="malorian_3516_idle" 			file="anims/fps/malorian_3516/malorian_3516_idle" blend_set="all"/>
+			<anim name="malorian_3516_recoil" 			file="anims/fps/malorian_3516/malorian_3516_recoil" blend_set="all"/>
+			<anim name="malorian_3516_recoil_steelsight" 	file="anims/fps/malorian_3516/malorian_3516_recoil_steelsight" blend_set="all"/>
+			<anim name="malorian_3516_equip" 			file="anims/fps/malorian_3516/malorian_3516_equip" blend_set="all"/>
+			<anim name="malorian_3516_unequip" 			file="anims/fps/malorian_3516/malorian_3516_unequip" blend_set="all"/>
+			<anim name="malorian_3516_melee" 			file="anims/fps/malorian_3516/malorian_3516_melee" blend_set="all"/>
+			<anim name="malorian_3516_melee_miss" 		file="anims/fps/malorian_3516/malorian_3516_melee_miss" blend_set="all"/>
+			<anim name="malorian_3516_use" 			file="anims/fps/malorian_3516/malorian_3516_use" blend_set="all"/>
+			<anim name="malorian_3516_sprint_enter" 		file="anims/fps/malorian_3516/malorian_3516_sprint_enter" blend_set="all"/>
+			<anim name="malorian_3516_sprint" 			file="anims/fps/malorian_3516/malorian_3516_sprint" blend_set="all"/>
+			<anim name="malorian_3516_sprint_exit" 		file="anims/fps/malorian_3516/malorian_3516_sprint_exit" blend_set="all"/>
+			<anim name="malorian_3516_com_down_var1" 		file="anims/fps/malorian_3516/malorian_3516_com_var1" blend_set="all"/>
+			<anim name="malorian_3516_com_stop" 		file="anims/fps/malorian_3516/malorian_3516_com_var5" blend_set="all"/>
+			<anim name="malorian_3516_com_come" 		file="anims/fps/malorian_3516/malorian_3516_com_var6" blend_set="all"/>
+			<anim name="malorian_3516_com_point" 		file="anims/fps/malorian_3516/malorian_3516_com_var7" blend_set="all"/>
+			<anim name="malorian_3516_get_up" 			file="anims/fps/malorian_3516/malorian_3516_get_up" blend_set="all"/>
+			<anim name="malorian_3516_gogo" 			file="anims/fps/malorian_3516/malorian_3516_gogo" blend_set="all"/>
+			<anim name="malorian_3516_tased" 			file="anims/fps/malorian_3516/malorian_3516_tased" blend_set="all"/>
+			<anim name="malorian_3516_tased_boost" 		file="anims/fps/malorian_3516/malorian_3516_tased_boost" blend_set="all"/>
+			<anim name="malorian_3516_tased_exit" 		file="anims/fps/malorian_3516/malorian_3516_tased_exit" blend_set="all"/>
+			<anim name="malorian_3516_inspect" 			file="anims/fps/malorian_3516/malorian_3516_inspect" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

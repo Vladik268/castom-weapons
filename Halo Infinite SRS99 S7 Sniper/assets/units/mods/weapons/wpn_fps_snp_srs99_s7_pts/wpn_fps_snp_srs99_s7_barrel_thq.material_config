@@ -1,0 +1,16 @@
+<materials version="3" group="weapon_group">
+	
+	<material name="mtr_s7_barrel_support" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel_support_df" mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel_support_nm" mip="1"/>
+    </material>
+	  <material name="mtr_s7_barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel_df"  mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel_nm"  mip="1"/>
+    </material>
+	<material name="mtr_s7_muzzle" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+            <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_muzzle_brake_df" mip="1"/>
+        <bump_normal_texture		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_muzzle_brake_nm" mip="1"/>
+    </material>
+	
+</materials>

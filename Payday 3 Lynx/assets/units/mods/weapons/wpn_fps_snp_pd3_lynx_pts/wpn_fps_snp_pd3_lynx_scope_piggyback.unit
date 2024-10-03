@@ -1,0 +1,7 @@
+<unit type="wpn" slot="1">
+	<object file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope_piggyback"/>
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data"/>
+		<extension name="base" class="WeaponSecondSight"/>
+	</extensions>
+</unit>

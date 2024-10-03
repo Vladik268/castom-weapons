@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_magazine" orientation_object="rp_magazine" />
+ 
+	<animations>
+		<animation_group name="reload">
+			<object name="reload_bullet_1" 		enabled="true" />
+			<object name="reload_bullet_2" 		enabled="true" />
+			<object name="reload_bullet_3" 		enabled="true" />
+			<object name="reload_bullet_4" 		enabled="true" />
+			<object name="reload_bullet_5" 		enabled="true" />
+		</animation_group>
+		<animation_group name="reload_not_empty">
+			<object name="reload_bullet_ne_2" 		enabled="true" />
+			<object name="reload_bullet_ne_3" 		enabled="true" />
+			<object name="reload_bullet_ne_4" 		enabled="true" />
+			<object name="reload_bullet_ne_5" 		enabled="true" />
+		</animation_group>
+	</animations>
+	
+  <graphics>
+		<object  name="g_bullet_1" 			enabled="true" />
+		<object  name="g_bullet_2" 			enabled="true" />
+		<object  name="g_bullet_3" 			enabled="true" />
+		<object  name="g_bullet_4" 			enabled="true" />
+		<object  name="g_bullet_5" 			enabled="true" />
+		
+		<object  name="g_magazine" enabled="true" />
+  </graphics>
+</dynamic_object>

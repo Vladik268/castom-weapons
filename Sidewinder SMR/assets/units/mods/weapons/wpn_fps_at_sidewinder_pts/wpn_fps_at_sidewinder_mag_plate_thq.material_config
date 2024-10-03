@@ -1,0 +1,6 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_sidewinder_at" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_at_sidewinder_pts/shared_textures/sidewinder_df" mip="1"/>
+		<bump_normal_texture file="units/mods/weapons/wpn_fps_at_sidewinder_pts/shared_textures/sidewinder_nm" mip="1"/>
+	</material>
+</materials>

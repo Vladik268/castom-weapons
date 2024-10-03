@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_bolt" orientation_object="rp_bolt" />
+  
+	<animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" 		enabled="true" />
+			<object name="anim_handle_reload" 			enabled="true" />
+		</animation_group>
+	</animations>
+	
+  <graphics>
+		<object  name="g_bolt" enabled="true" />
+		<object  name="g_charging_handle" enabled="true" />
+		<object  name="g_piston" enabled="true" />
+
+
+  </graphics>
+</dynamic_object>

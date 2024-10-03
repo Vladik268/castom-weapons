@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/units/menu_character/player_criminal/menu_criminal" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="std/stand/still/idle/menu"/>
+		</search>
+
+		<target mode="attach">
+			<param name="husk_sidewinder" value="0"/>
+			<anim name="ntl_idle_sidewinder" weight="husk_sidewinder"/>
+		</target>
+	</tweak>
+</tweaks>

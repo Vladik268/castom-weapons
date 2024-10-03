@@ -1,0 +1,253 @@
+	<mod name="Payday 3 Lynx" author="RJC9000 and PlayBONK" min_lib_ver="3.38">
+	<AssetUpdates id="45217" version="0.97" provider="modworkshop"/>
+	<Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english"/>
+	</Localization>
+	<GlobalValue id="pd3_lynx_mod" color="Color(0.8, 0.8, 0.2)"/>
+	
+	<!-- Default -->
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_barrel" based_on="wpn_fps_snp_m95_barrel_long" type="barrel" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_barrel" hidden="true" global_value="pd3_lynx_mod" ver="2">
+	</WeaponMod> 
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_bolt" based_on="wpn_fps_smg_shepheard_bolt_standard" type="bolt" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_bolt" hidden="true" global_value="pd3_lynx_mod" ver="2">
+	</WeaponMod> 
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_magazine" based_on="wpn_fps_snp_m95_magazine" type="magazine" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_magazine" hidden="true" global_value="pd3_lynx_mod" ver="2">
+		<bullet_objects prefix = "g_bullet_" amount="5"/>
+		<stats reload="-3" extra_ammo="0" recoil="0" concealment="0"/>
+	</WeaponMod> 
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_muzzle_brake" based_on="wpn_fps_smg_hajk_ns_standard" type="barrel_ext" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_muzzle_brake" hidden="true" global_value="pd3_lynx_mod" ver="2">
+	</WeaponMod> 
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_receiver" based_on="wpn_fps_snp_m95_upper_reciever" type="upper_reciever" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_receiver" hidden="true" global_value="pd3_lynx_mod" ver="2">
+		<forbids>
+			<value_node value="wpn_fps_upg_o_specter_piggyback"/>
+		</forbids> 
+	</WeaponMod> 
+	
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_scope" based_on="wpn_fps_upg_o_aimpoint" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope"  type="sight" steelsight_visible="false" inherit_weapons="false" inherit_adds="true" inherit_override="true" inherit_parts_override="true" inherit_parts_forbids="true" has_description="true" global_value="pd3_lynx_mod" ver="2">
+		<stats concealment="0" recoil="0" spread="0" zoom="5"/>
+		<perks>
+			<value_node value="highlight"/> 
+		</perks>
+		<adds>
+			<value_node value="wpn_fps_snp_pd3_lynx_scope_steelsight"/> 
+		</adds>
+			<stance_mod>
+				<wpn_fps_snp_pd3_lynx rotation="0 0 0 -1" translation="0 0 0"/>  
+		</stance_mod> 
+	</WeaponMod>
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_scope_steelsight" based_on="wpn_fps_upg_o_specter_steelsight" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope_steelsight" hidden="true" ver="2">
+			<stance_mod>
+				<wpn_fps_snp_pd3_lynx rotation="-0.000959931 0 -0 -1" translation="0.009 -7 0.45"/> 
+		</stance_mod> 
+	</WeaponMod>
+	<WeaponMod id="wpn_fps_snp_pd3_lynx_scope_piggyback" based_on="wpn_fps_upg_o_45steel" type="second_sight" a_obj="a_o" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope_piggyback" has_description="true" hidden="false" global_value="pd3_lynx_mod" ver="2">
+		<stats concealment="0" recoil="0" spread="0" gadget_zoom="1"/>
+	</WeaponMod>
+
+<!--Weapon-->
+		<Weapon unlock_level="65">
+		<weapon id="pd3_lynx" based_on="wa2000" weapon_hold="lynx" CLIP_AMMO_MAX="5" NR_CLIPS_MAX="3" global_value="pd3_lynx_mod">
+			<stats damage="100" spread="24" spread_moving="16" recoil="7" concealment="1"/>
+			<stats_modifiers damage="35"/> 
+			<timers reload_not_empty="3.2" reload_empty="3.8" unequip="0.6" equip="0.6" />
+			<fire_mode_data fire_rate="1.25"/>
+				<sounds fire="pd3_lynx_fire" fire_single="pd3_lynx_fire">
+				</sounds>		
+			<AMMO_PICKUP>
+				<value_node value="0.10"/>
+				<value_node value="0.65"/>
+			</AMMO_PICKUP>
+			<kick>
+				<standing>
+					<value_node value="6.7"/>
+					<value_node value="7.5"/>
+					<value_node value="0.6"/>
+					<value_node value="-0.6"/>
+				</standing>
+				<crouching>
+					<value_node value="5.7"/>
+					<value_node value="6.5"/>
+					<value_node value="0.6"/>
+					<value_node value="-0.6"/>
+				</crouching>
+				<steelsight>
+					<value_node value="4.0"/>
+					<value_node value="4.7"/>
+					<value_node value="0.6"/>
+					<value_node value="-0.6"/>
+				</steelsight>
+			</kick>
+			<animations reload_name_id="lynx"/>
+		</weapon>
+		<factory id="wpn_fps_snp_pd3_lynx" unit="units/mods/weapons/wpn_fps_snp_pd3_lynx/wpn_fps_snp_pd3_lynx">
+		<animations reload="reload" fire="recoil" fire_steelsight="recoil" reload_not_empty="reload_not_empty" magazine_empty="last_recoil" equip="equip"/>
+		<adds/>
+		<override>
+			<wpn_fps_m4_uupg_fg_rail_ext 		unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" />
+			<wpn_fps_addon_ris 			   		unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" />
+		</override> 
+			<default_blueprint>
+
+				<value_node value="wpn_fps_snp_pd3_lynx_barrel"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_bolt"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_magazine"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_muzzle_brake"/>  
+				<value_node value="wpn_fps_snp_pd3_lynx_receiver"/>  
+				<value_node value="wpn_fps_snp_pd3_lynx_scope"/>
+
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_snp_pd3_lynx_barrel"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_bolt"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_magazine"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_muzzle_brake"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_receiver"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_scope"/>
+				<value_node value="wpn_fps_snp_pd3_lynx_scope_piggyback"/>
+				
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_peqbox"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_surefire"/>
+				<value_node value="wpn_fps_upg_fl_ass_peq15"/>
+				<value_node value="wpn_fps_upg_fl_ass_laser"/>
+				<value_node value="wpn_fps_upg_fl_ass_utg"/>
+				<value_node value="wpn_fps_upg_fl_dbal_laser"/>
+<!--			<value_node value="wpn_fps_upg_o_specter"/> -->
+<!--			<value_node value="wpn_fps_upg_o_aimpoint"/>
+				<value_node value="wpn_fps_upg_o_docter"/>
+				<value_node value="wpn_fps_upg_o_eotech"/>
+				<value_node value="wpn_fps_upg_o_t1micro"/>
+				<value_node value="wpn_fps_upg_o_acog"/>
+				<value_node value="wpn_fps_upg_o_cmore"/>
+				<value_node value="wpn_fps_upg_o_aimpoint_2"/>
+				<value_node value="wpn_fps_upg_o_eotech_xps"/>
+				<value_node value="wpn_fps_upg_o_reflex"/>
+				<value_node value="wpn_fps_upg_o_rx01"/>
+				<value_node value="wpn_fps_upg_o_rx30"/>
+				<value_node value="wpn_fps_upg_o_cs"/>
+				<value_node value="wpn_fps_upg_o_spot"/>
+				<value_node value="wpn_fps_upg_o_xpsg33_magnifier"/>
+				<value_node value="wpn_fps_upg_o_bmg"/>
+				<value_node value="wpn_fps_upg_o_uh"/>
+				<value_node value="wpn_fps_upg_o_fc1"/>
+				<value_node value="wpn_fps_upg_o_sig"/>
+				<value_node value="wpn_fps_upg_o_tf90"/>
+				<value_node value="wpn_fps_upg_o_poe"/>
+				<value_node value="wpn_fps_upg_o_hamr"/>
+				<value_node value="wpn_fps_upg_o_atibal"/>
+				<value_node value="wpn_fps_upg_o_health"/> -->
+			
+			</uses_parts>
+		</factory>
+		<stance>
+		<standard>
+			<shoulders rotation="-0.00103573 0.00547754 -0.00269336 -0.999981" translation="-1.943 3.585 -1.898"/>
+		</standard>
+		<crouched>
+			<shoulders rotation="-0.00194094 0.0176915 -0.00272089 -0.999838" translation="-2.943 1.585 -2.898"/>
+		</crouched>
+		<steelsight> 
+			<shoulders rotation="0.00114319 8.71667e-006 8.73662e-006 -0.999999" translation="-10.729 6.532 -2.248"/>
+		</steelsight> 
+		</stance> 
+	</Weapon>
+
+
+<!--		<shoulders rotation="0.00451434 0.00285805 0.000955378 -0.999985" translation="-10.775 -11.415 2.485"/> -->
+
+<!--	<shoulders rotation="0.00189637 0.00286055 0.000947893 -0.999994" translation="-10.775 -11.415 2.28"/> -->
+
+
+	<Sounds directory="assets\sounds">
+		<sound id="pd3_lynx_fire" path="limax_fire.ogg" prefix="regular"/>
+		<sound id="pd3_lynx_fire" path="limax_supp.ogg"  prefix="suppressed_a"/>
+		<sound id="pd3_lynx_fire" path="limax_supp.ogg"  prefix="suppressed_b"/>
+		<sound id="pd3_lynx_fire" path="limax_supp.ogg"  prefix="suppressed_c"/>
+		
+		<sound id="pd3_lynx_start" path="limax_reload_start.ogg" prefix="first"/>
+		<sound id="pd3_lynx_start" path="limax_reload_start.ogg" prefix="third"/>
+		<sound id="lynx_mag_release" path="limax_mag_release.ogg" prefix="first"/>
+		<sound id="lynx_mag_release" path="limax_mag_release.ogg" prefix="third"/>
+		<sound id="lynx_mag_out" path="limax_mag_out.ogg" prefix="first"/>
+		<sound id="lynx_mag_out" path="limax_mag_out.ogg" prefix="third"/>
+		<sound id="pd3_lynx_bullet_show" path="limax_bullet_show.ogg" prefix="first"/>
+		<sound id="pd3_lynx_bullet_show" path="limax_bullet_show.ogg" prefix="third"/>
+		<sound id="pd3_lynx_mag_handle" path="limax_mag_handle.ogg" prefix="first"/>
+		<sound id="pd3_lynx_mag_handle" path="limax_mag_handle.ogg" prefix="third"/>
+		<sound id="pd3_lynx_mag_contact" path="limax_mag_contact.ogg" prefix="first"/>
+		<sound id="pd3_lynx_mag_contact" path="limax_mag_contact.ogg" prefix="third"/>
+		<sound id="pd3_lynx_mag_in" path="limax_mag_in.ogg" prefix="first"/>
+		<sound id="pd3_lynx_mag_in" path="limax_mag_in.ogg" prefix="third"/>
+		<sound id="pd3_lynx_hand_swap" path="limax_hand_swap.ogg" prefix="first"/>
+		<sound id="pd3_lynx_hand_swap" path="limax_hand_swap.ogg" prefix="third"/>
+		<sound id="pd3_lynx_bolt_back" path="limax_bolt_pull.ogg" prefix="first"/>
+		<sound id="pd3_lynx_bolt_back" path="limax_bolt_pull.ogg" prefix="third"/>
+		<sound id="pd3_lynx_bolt_forward" path="limax_bolt_release.ogg" prefix="first"/>
+		<sound id="pd3_lynx_bolt_forward" path="limax_bolt_release.ogg" prefix="third"/>
+		<sound id="pd3_lynx_end" path="limax_reload_end.ogg" prefix="first"/>
+		<sound id="pd3_lynx_end" path="limax_reload_end.ogg" prefix="third"/>
+		<sound id="het5_mag_rattle" path="limax_mag_rattle.ogg" prefix="first"/>
+		<sound id="het5_mag_rattle" path="limax_mag_rattle.ogg" prefix="third"/>
+		<sound id="het5_mag_slap" path="limax_mag_smack.ogg" prefix="first"/>
+		<sound id="het5_mag_slap" path="limax_mag_smack.ogg" prefix="third"/>
+		<sound id="het5_extend" path="het5_extend.ogg" prefix="first"/>
+		<sound id="het5_extend" path="het5_extend.ogg" prefix="third"/>
+
+		
+	</Sounds>
+
+	<AddFiles directory="assets">
+	
+<!-- Animations -->
+		<animation path="anims/fps/lynx/lynx_reload_not_empty" 		load="true"/>
+		<animation path="anims/fps/lynx/lynx_reload" 				load="true"/> 
+		<animation path="anims/fps/lynx/lynx_equip" 				load="true"/> 
+		<animation path="anims/fps/lynx/lynx_recoil" 				load="true"/> 
+		
+<!--GUIs-->
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/pd3_lynx"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_pd3_lynx_scope"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_pd3_lynx_scope_piggyback"/>
+	
+<!--Unit Path-->
+		<unit_npc path="units/mods/weapons/wpn_fps_snp_pd3_lynx/wpn_fps_snp_pd3_lynx"/>
+				
+<!--Textures-->
+		<texture path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/50bmg"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_barrel"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_magazine"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_muzzle"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock"/>
+	 <df_nm_cc_gsma path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper"/>
+	<df_nm_cc_gsma	path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/het5_scope"/>
+	<df_nm 	 		path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/het5_lens"/>
+	<texture 		path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/het5_lens_op"/>
+	<texture 		path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/fluted_crosshair_df"/>
+
+
+
+<!--Parts-->
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_barrel"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_bolt"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_receiver"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_magazine"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_muzzle_brake"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope"/>
+		<unit_obj	 path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope_piggyback"/>
+		<unit_mat_thq  path="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope_steelsight"/>
+
+
+	</AddFiles>
+		
+
+	<Hooks directory="hooks">
+		<hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>  
+	<!--<hook file="weapontweakdata.lua" source_file="lib/tweak_data/weapontweakdata"/>  	 -->
+		
+	</Hooks>
+	
+</mod>

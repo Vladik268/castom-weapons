@@ -1,0 +1,87 @@
+<table directory="assets">
+	<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/or12"/>
+	<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_or12_fl"/>
+	<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_shot_or12_sight"/>
+	<texture path="units/mods/weapons/wpn_fps_shot_or12_pts/slug_df"/>
+	<texture path="units/mods/weapons/wpn_fps_shot_or12_pts/or12_df"/>
+	<texture path="units/mods/weapons/wpn_fps_shot_or12_pts/or12_nm"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel"/>
+	<model path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg"/>
+	<object path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh_thq"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12_npc"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12/wpn_fps_shot_or12"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_dh"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_body"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_vg"/>
+	<unit path="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel"/>
+	<animation path="anims/fps/or12/or12_reload" load="true"/>
+	<animation path="anims/fps/or12/or12_reload_not_empty" load="true"/>
+	<animation path="anims/fps/or12/or12_idle" load="true"/>
+	<animation path="anims/fps/or12/or12_recoil" load="true"/>
+	<animation path="anims/fps/or12/or12_recoil_enter" load="true"/>
+	<animation path="anims/fps/or12/or12_recoil_loop" load="true"/>
+	<animation path="anims/fps/or12/or12_recoil_exit" load="true"/>
+	<animation path="anims/fps/or12/or12_equip" load="true"/>
+	<animation path="anims/fps/or12/or12_unequip" load="true"/>
+	<animation path="anims/fps/or12/or12_melee" load="true"/>
+	<animation path="anims/fps/or12/or12_melee_miss" load="true"/>
+	<animation path="anims/fps/or12/or12_use" load="true"/>
+	<animation path="anims/fps/or12/or12_sprint_enter" load="true"/>
+	<animation path="anims/fps/or12/or12_sprint" load="true"/>
+	<animation path="anims/fps/or12/or12_sprint_exit" load="true"/>
+	<animation path="anims/fps/or12/or12_com_var1" load="true"/>
+	<animation path="anims/fps/or12/or12_com_var5" load="true"/>
+	<animation path="anims/fps/or12/or12_com_var6" load="true"/>
+	<animation path="anims/fps/or12/or12_com_var7" load="true"/>
+	<animation path="anims/fps/or12/or12_get_up" load="true"/>
+	<animation path="anims/fps/or12/or12_gogo" load="true"/>
+	<animation path="anims/fps/or12/or12_tased" load="true"/>
+	<animation path="anims/fps/or12/or12_tased_boost" load="true"/>
+	<animation path="anims/fps/or12/or12_tased_exit" load="true"/>
+	<animation path="anims/fps/or12/or12_inspect" load="true"/>
+	<lua path="Hooks/weaponfactorytweakdata" load="true"/>
+</table>

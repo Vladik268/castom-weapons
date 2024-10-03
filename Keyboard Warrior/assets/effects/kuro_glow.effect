@@ -1,0 +1,19 @@
+<effect force_synch="false">
+
+    <atom name="glowo" min_size="1" max_size="1" lifetime="-1" random_start_time="false" start_time="0" preroll="0" inherit_velocity_multiplier="1" fade_in_start="-1" fade_in_length="0" fade_out_start="-1" spawn_cull_policy="initialize" cull_policy="update" cull_gracetime="0" max_particle_radius="-1" soundbank="" cue="" ambient="false" grab_relative="effect" grab_pos="0 0 0" grab_radius="200" grab_backfacing="false" timeline="">
+        <initializerstack>
+            <localboxrandomposition min="0 0 0" max="0 0 0"/>
+            <boxrandomcolor min="157 39 203" max="170 39 203"/>
+        </initializerstack>
+        <simulatorstack>
+            <worldtransform transform_rotations="false"/>
+        </simulatorstack>
+        <visualizerstack>
+            <billboard texture="effects/textures/add_atlas_df" intensity="flashlight" billboard_type="camera_facing" rotation_channel="world_rotation" blend_mode="add" render_template="effect_op_halo" origo="0.5 0.5" per_particle_age="false" size_input="constant" size="100 100" color_input="keys" opacity_input="constant" opacity="255" rotation_input="constant" rotation="0" rotation_axis="0 0 1" uv_size="0.125 0.03125" uv_offset_input="constant" uv_offset="0.75 0.125">
+                <color_keys loop="false">
+                    <key t="0" v="157 39 203"/>
+                </color_keys>
+            </billboard>
+        </visualizerstack>
+    </atom>
+</effect>

@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_upg_vss_stock_folding" orientation_object="rp_vss"/>
+	<graphics>
+		<object name="g_grip" enabled="true"/>
+		<object name="g_stock" enabled="true"/>
+	</graphics>
+</dynamic_object>

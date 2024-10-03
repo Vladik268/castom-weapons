@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_receiver" orientation_object="rp_receiver" />
+
+  <graphics>
+		
+		<object  name="g_bipod" enabled="true" />
+		
+		<object  name="g_bolt_static" enabled="true" />
+		<object  name="g_charging_handle" enabled="true" />
+		<object  name="g_dust_cover" enabled="true" />
+		<object  name="g_grip" enabled="true" />
+		<object  name="g_handguard" enabled="true" />
+		<object  name="g_lower" enabled="true" />
+		<object  name="g_stock" enabled="true" />
+		<object  name="g_upper" enabled="true" />
+		
+
+  </graphics>
+</dynamic_object>

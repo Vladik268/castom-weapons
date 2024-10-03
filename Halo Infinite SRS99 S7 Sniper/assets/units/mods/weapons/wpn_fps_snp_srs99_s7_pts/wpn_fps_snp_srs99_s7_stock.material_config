@@ -1,0 +1,27 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_s7_chinrest" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest_df"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest_nm"/>
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_rear_lower" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower_df"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower_nm"/>
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_rear_upper" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper_df" />
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper_nm" />
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_s7_stock_pad" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad_df" />
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad_nm" />
+        <material_texture       file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	
+</materials>

@@ -1,0 +1,5 @@
+{
+    "bm_w_trent" : "Four Letter Word",
+
+    "menu_l_global_value_trent" : "Three barrels weren't enough."
+}

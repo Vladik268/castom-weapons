@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash" orientation_object="rp_wpn_shell_m_grenade" />
+	<graphics>
+		<object name="g_grenade" enabled="true" />
+	</graphics>
+</dynamic_object>

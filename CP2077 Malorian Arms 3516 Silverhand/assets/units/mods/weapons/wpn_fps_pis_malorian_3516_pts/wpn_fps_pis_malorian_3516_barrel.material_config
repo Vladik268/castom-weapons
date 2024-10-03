@@ -1,0 +1,21 @@
+<materials version="3" group="weapon_deagle">
+
+	<material name="mtr_malorian_main" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+
+	<material name="mtr_malorian_decals_d01" render_template="decal:DIFFUSE_TEXTURE:RL_FPS_WEAPON" version="2">
+	<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_df"/>
+    </material>		
+	<material name="mtr_gray_emission" render_template="generic:DEPTH_SCALING:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1:SELF_ILLUMINATION:SELF_ILLUMINATION_BLOOM" version="2">
+			<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_gray"/>
+		<bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_gray"/>
+  <self_illumination_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_gray"/>
+        <variable type="scalar" name="il_bloom" value="6.0070002853172"/>
+        <variable type="scalar" name="il_multiplier" value="reddot"/>
+    </material>
+
+</materials>

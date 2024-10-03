@@ -1,0 +1,7 @@
+<unit type="wpn" slot="1" >
+    <object file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_laser" />
+    <extensions>
+        <extension name="unit_data" class="ScriptUnitData" />
+        <extension name="base" class="WeaponLaser" />
+    </extensions>
+</unit>

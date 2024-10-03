@@ -1,0 +1,12 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_spe_nckuro/wpn_fps_spe_nckuro" />
+	<dependencies>
+		<depends_on bnk="soundbanks/weapon_tecci"/>
+	</dependencies>
+    <extensions>
+        <extension name="unit_data" class="ScriptUnitData" />
+        <extension name="base" class="KuroWeaponBase" >
+			<var name="name_id" value="nckuro" />
+		</extension>
+    </extensions>
+</unit>

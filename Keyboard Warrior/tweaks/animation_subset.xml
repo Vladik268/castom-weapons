@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+		
+		<target mode="attach">
+			<anim name="nckuro_reload" 								file="anims/fps/nckuro/nckuro_reload" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

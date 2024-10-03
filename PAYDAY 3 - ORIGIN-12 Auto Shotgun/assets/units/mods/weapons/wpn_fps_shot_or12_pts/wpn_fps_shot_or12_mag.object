@@ -1,0 +1,50 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_mag" orientation_object="rp_wpn_fps_sho_sko12_mag_drum" />
+    <animations>
+		<animation_group name="reload" >
+			<object name="anim_mag_reload" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_not_empty" >
+			<object name="anim_mag_reload_not_empty" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil" >
+			<object name="anim_mag_recoil" enabled="true" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_mag" />
+        <object enabled="true" name="g_shell_1" />
+        <object enabled="true" name="g_shell_2" />
+        <object enabled="true" name="g_shell_3" />
+        <object enabled="true" name="g_shell_4" />
+        <object enabled="true" name="g_shell_5" />
+        <object enabled="true" name="g_shell_6" />
+        <object enabled="true" name="g_shell_7" />
+        <object enabled="true" name="g_shell_8" />
+        <object enabled="true" name="g_shell_9" />
+        <object enabled="true" name="g_shell_10" />
+        <object enabled="true" name="g_shell_11" />
+        <object enabled="true" name="g_shell_12" />
+        <object enabled="true" name="g_shell_13" />
+        <object enabled="true" name="g_shell_14" />
+        <object enabled="true" name="g_shell_15" />
+        <object enabled="true" name="g_shell_16" />
+        <object enabled="true" name="g_shell_17" />
+        <object enabled="true" name="g_shell_18" />
+        <object enabled="true" name="g_shell_19" />
+        <object enabled="true" name="g_shell_20" />
+        <object enabled="true" name="g_shell_21" />
+        <object enabled="true" name="g_shell_22" />
+        <object enabled="true" name="g_shell_23" />
+        <object enabled="true" name="g_shell_24" />
+        <object enabled="true" name="g_shell_25" />
+        <object enabled="true" name="g_shell_26" />
+        <object enabled="true" name="g_shell_27" />
+        <object enabled="true" name="g_shell_28" />
+        <object enabled="true" name="g_shell_29" />
+        <object enabled="true" name="g_shell_30" />
+        <object enabled="true" name="g_shell_31" />
+        <object enabled="true" name="g_shell_32" />
+        <object enabled="false" name="g_shellguide" />
+    </graphics>
+</dynamic_object>

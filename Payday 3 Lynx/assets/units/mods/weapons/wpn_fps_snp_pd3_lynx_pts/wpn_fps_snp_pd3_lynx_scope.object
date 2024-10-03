@@ -1,0 +1,15 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_scope" orientation_object="rp_optic"/>
+	<graphics>
+		
+		<object enabled="true" name="g_lynx_sight"/>
+		<object enabled="true" name="g_lynx_lens"/>
+		<object enabled="true" name="g_lynx_lens_front"/>
+		<object enabled="true" name="g_reddot"/>
+		<object enabled="true" name="g_target_scanner_overlay"/>
+		<object enabled="true" name="g_reticle"/>
+		
+
+		
+	</graphics>
+</dynamic_object>

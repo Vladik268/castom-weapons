@@ -1,0 +1,63 @@
+<materials version="3" group="weapon_deagle">
+    <material name="mtr_malorian_main" render_template="generic_customizable:CUBE_ENVIRONMENT_MAPPING:DECAL_STICKER_UV2:DIFFUSE_TEXTURE:GRADIENTMAP:NORMALMAP:PATTERN_GRADIENTMAP:PATTERN_GRADIENTMAP_ANGLE_OFFSET:PATTERN_UV2:WEAR_TEAR_MASKING" unique="true" version="2">
+          <diffuse_texture 	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_df_cc"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_nm"/>
+        <diffuse_layer1_texture file="units/payday2_cash/safes/default/base_gradient/base_default_df"/>
+        <diffuse_layer2_texture file="units/payday2_cash/safes/default/pattern_gradient/gradient_default_df"/>
+        <diffuse_layer0_texture file="units/payday2_cash/safes/default/pattern/pattern_default_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <variable value="1 0 1" type="vector3" name="pattern_tweak"/>
+		<variable value="0 0 0" type="vector3" name="pattern_pos"/>
+        <variable value="0" type="scalar" name="wear_tear_value"/>
+        <diffuse_layer3_texture file="units/payday2_cash/safes/default/sticker/sticker_default_df"/>
+        <variable value="1 1 1" type="vector3" name="uv_scale"/>
+        <variable value="0 0 0" type="vector3" name="uv_offset_rot"/>
+        <variable value="0 0 0" type="vector3" name="cubemap_pattern_control"/>
+    </material>
+    <material name="mtr_malorian_magazine" render_template="generic_customizable:CUBE_ENVIRONMENT_MAPPING:DECAL_STICKER_UV2:DIFFUSE_TEXTURE:GRADIENTMAP:NORMALMAP:PATTERN_GRADIENTMAP:PATTERN_GRADIENTMAP_ANGLE_OFFSET:PATTERN_UV2:WEAR_TEAR_MASKING" unique="true" version="2">
+          <diffuse_texture 	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_magazine_df_cc"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_magazine_nm"/>
+        <diffuse_layer1_texture file="units/payday2_cash/safes/default/base_gradient/base_default_df"/>
+        <diffuse_layer2_texture file="units/payday2_cash/safes/default/pattern_gradient/gradient_default_df"/>
+        <diffuse_layer0_texture file="units/payday2_cash/safes/default/pattern/pattern_default_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <variable value="1 0 1" type="vector3" name="pattern_tweak"/>
+		<variable value="0 0 0" type="vector3" name="pattern_pos"/>
+        <variable value="0" type="scalar" name="wear_tear_value"/>
+        <diffuse_layer3_texture file="units/payday2_cash/safes/default/sticker/sticker_default_df"/>
+        <variable value="1 1 1" type="vector3" name="uv_scale"/>
+        <variable value="0 0 0" type="vector3" name="uv_offset_rot"/>
+        <variable value="0 0 0" type="vector3" name="cubemap_pattern_control"/>
+    </material>
+	
+	
+
+	<material name="mtr_malorian_grip_trans" version="2" unique="true" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE:FPS:NORMALMAP">
+		<variable value="0 0 0.21999999880791" type="vector3" name="fresnel_settings"/>
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_nm" mip="1"/>
+		<opacity_texture	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_op" mip="1"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+    </material>	
+  <material render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE:FPS:NORMALMAP" unique="true" name="mtr_malorian_glass" version="2">
+        <variable value="1.6999999284744 1 1" type="vector3" name="fresnel_settings"/>
+        <opacity_texture file="units/pd2_dlc_bbq/weapons/molotov_cocktail/textures/wpn_fps_molotov_glass_op"/>
+        <diffuse_texture file="units/pd2_dlc_bbq/weapons/molotov_cocktail/textures/wpn_fps_molotov_glass_df"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
+        <bump_normal_texture file="units/pd2_dlc_bbq/weapons/molotov_cocktail/textures/molotov_nm"/>
+    </material>
+	<material name="mtr_malorian_decals_d01" render_template="decal:DIFFUSE_TEXTURE:RL_FPS_WEAPON" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_df"/>
+    </material>		
+	<material name="mtr_malorian_decals_d02" render_template="decal:DIFFUSE_TEXTURE:RL_FPS_WEAPON" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_color_df"/>
+    </material>		
+	<material name="mtr_red_emission" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE" version="2">
+        <variable value="reddot" type="scalar" name="intensity"/>
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_red"/>
+	</material>
+	<material name="mtr_yellow_emission" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE" version="2">
+        <variable value="reddot" type="scalar" name="intensity"/>
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_yellow"/>
+	</material>	
+</materials>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<unit type="gen" slot="13">
+	<object file="units/mods/weapons/wpn_prj_nckuro_exp/wpn_prj_nckuro_exp" />
+	<dependencies>
+		<depends_on bnk="soundbanks/regular_weapon_sfx" />
+	</dependencies>
+	<extensions>
+		<extension name="base" class="KuroGrenade"/>
+		<extension name="unit_data" class="ScriptUnitData"/>
+		<extension name="damage" class="UnitDamage">
+			<var name="_skip_give_body_collision_damage" value="true"/>
+		</extension>
+	</extensions>
+	<sounds>
+		<default_soundsource source="rp_wpn_prj_ecp_arrow_exp" />
+		<soundsource name="snd" source="rp_wpn_prj_ecp_arrow_exp" />
+	</sounds>
+</unit>

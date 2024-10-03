@@ -1,0 +1,4 @@
+{
+	"bm_w_x_lemming": "Akimbo 5/7 AP Pistols",
+	"bm_w_x_lemming_desc": "Penetrates body armor, enemies, shields and walls."
+}

@@ -1,0 +1,21 @@
+<materials version="3" group="weapon_deagle">
+
+	<material name="mtr_malorian_main" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_nm" mip="1"/>
+		<reflection_texture type="cubemap" global_texture="current_global_texture"/>
+    </material>
+	
+	
+	
+	<material name="mtr_malorian_decals_d01" render_template="decal:DIFFUSE_TEXTURE:RL_FPS_WEAPON" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_df"/>
+    </material>		
+	<material name="mtr_gray_emission" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE" version="2">
+        <variable value="reddot" type="scalar" name="intensity"/>
+		<diffuse_texture file="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_gray"/>
+	</material>
+
+
+
+</materials>

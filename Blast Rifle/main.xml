@@ -1,0 +1,815 @@
+<mod name="Blast Rifle" color="Color(0.01,0.62,0.98)">
+	<Localization directory="loc" default="english.txt"/>
+	<AssetUpdates id="32588" version="1.22" provider="modworkshop"/>
+	<GlobalValue id="def2050blastriflemod" color="Color(0.7, 0.2, 0.1)"/>
+	<WeaponMod id="wpn_fps_ass_blast_barrel" based_on="wpn_fps_ass_l85a2_b_medium" wpn_pts="wpn_fps_ass_blast" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_ass_blast_mag" based_on="wpn_fps_smg_mp5_m_drum" wpn_pts="wpn_fps_ass_blast" hidden="true" ver="2">
+		<animations reload="reload" reload_not_empty="reload"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_ass_blast_scope" based_on="wpn_fps_upg_o_aimpoint" a_obj="a_body" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats recoil="1" concealment="-1"/>
+		<stance_mod>
+			<wpn_fps_ass_blast translation="0 5 -2.1"/>
+		</stance_mod>
+		<forbids>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</forbids>
+		<ads_objects>
+			<value_node value="g_lens_ads"/>
+			<value_node value="g_scope_ads"/>
+		</ads_objects>
+		<ads_objects_hide>
+			<value_node value="g_lens_solid"/>
+			<value_node value="g_scope"/>
+			<value_node value="g_scope2"/>
+		</ads_objects_hide>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_ass_blast_sightrail" based_on="wpn_fps_smg_sterling_o_adapter" a_obj="a_body" wpn_pts="wpn_fps_ass_blast" hidden="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_ass_blast_rec" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" hidden="true" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_ammo_ap" based_on="wpn_fps_upg_a_custom" sub_type="ammo_slug" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats total_ammo_mod="-5" damage="10" recoil="-1" spread="1" suppression="0"/>
+		<custom_stats armor_piercing_add="1" can_shoot_through_enemy="true" can_shoot_through_shield="true"/>
+		<override_weapon muzzleflash="effects/blast_rifle/nanorad" muzzleflash_silenced="effects/blast_rifle/nanorad_supp">
+			<sounds fire="blast_fire_rad" fire_single="blast_fire_rad" use_fix="true"/>
+		</override_weapon>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_ammo_fire" based_on="wpn_fps_upg_a_custom" sub_type="ammo_dragons_breath" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats total_ammo_mod="-4" damage="-10" recoil="-1" spread="1" suppression="0"/>
+		<custom_stats armor_piercing_add="1" ignore_statistic="true" can_shoot_through_shield="true" bullet_class="FlameBulletBase">
+			<fire_dot_data dot_trigger_chance="100" dot_damage="10" dot_length="3.1" dot_trigger_max_distance="3000" dot_tick_period="0.5"/>
+		</custom_stats>
+		<override_weapon muzzleflash="effects/blast_rifle/nanoincen" muzzleflash_silenced="effects/blast_rifle/nanoincen_supp">
+			<sounds fire="blast_fire_incen" fire_single="blast_fire_incen" use_fix="true"/>
+		</override_weapon>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_ammo_poison" based_on="wpn_fps_upg_a_custom" sub_type="ammo_poison" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats total_ammo_mod="-3" damage="5" recoil="-1" spread="1" suppression="0"/>
+		<custom_stats armor_piercing_add="1" ignore_statistic="true" can_shoot_through_enemy="true" bullet_class="PoisonBulletBase">
+			<fire_dot_data dot_trigger_chance="100" dot_damage="10" dot_length="3.1" dot_trigger_max_distance="3000" dot_tick_period="0.5"/>
+		</custom_stats>
+		<override_weapon muzzleflash="effects/blast_rifle/nanobio" muzzleflash_silenced="effects/blast_rifle/nanobio_supp">
+			<sounds fire="blast_fire_bio" fire_single="blast_fire_bio" use_fix="true"/>
+		</override_weapon>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_ammo_stun" based_on="wpn_fps_upg_a_custom" sub_type="ammo_electric" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats total_ammo_mod="-5" damage="30" recoil="-1" spread="1" suppression="0"/>
+		<custom_stats armor_piercing_add="1" ignore_statistic="true" bullet_class="InstantElectricBulletBase"/>
+		<override_weapon muzzleflash="effects/blast_rifle/nanoelec" muzzleflash_silenced="effects/blast_rifle/nanoelec_supp">
+			<sounds fire="blast_fire_elec" fire_single="blast_fire_elec" use_fix="true"/>
+		</override_weapon>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_ammo_syphon" based_on="wpn_fps_upg_a_custom" sub_type="ammo_explosive" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats total_ammo_mod="-3" damage="8" recoil="-1" spread="1" suppression="0"/>
+		<custom_stats ignore_statistic="true" can_shoot_through_shield="true" bullet_class="SyphonAmmoBase">
+		</custom_stats>
+		<override_weapon muzzleflash="effects/blast_rifle/nanosyphon" muzzleflash_silenced="effects/blast_rifle/nanosyphon_supp">
+			<sounds fire="blast_fire_syphon" fire_single="blast_fire_syphon" use_fix="true"/>
+		</override_weapon>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_barrel_apex" based_on="wpn_fps_ass_l85a2_b_medium" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats damage="5" spread="2" recoil="2" concealment="-7" suppression="-4"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_barrel_bulwark" based_on="wpn_fps_ass_l85a2_b_medium" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats damage="4" spread="3" recoil="1" concealment="-10" suppression="-5"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_barrel_powerbore" based_on="wpn_fps_ass_l85a2_b_medium" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats damage="5" spread="2" concealment="-5" suppression="-3"/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_upg_blast_bayonet" based_on="wpn_fps_m4_lower_reciever" type="bayonet" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats concealment="-2" min_damage="17.5" min_damage_effect="1.75" max_damage="17.5" max_damage_effect="1.75"/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_upg_blast_bayonet_grn" based_on="wpn_fps_m4_lower_reciever" type="bayonet" has_description="true" desc_id="bm_wp_wpn_fps_upg_blast_bayonet_desc" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats concealment="-2" min_damage="17.5" min_damage_effect="1.75" max_damage="17.5" max_damage_effect="1.75"/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_upg_blast_bayonet_red" based_on="wpn_fps_m4_lower_reciever" type="bayonet" has_description="true" desc_id="bm_wp_wpn_fps_upg_blast_bayonet_desc" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats concealment="-2" min_damage="17.5" min_damage_effect="1.75" max_damage="17.5" max_damage_effect="1.75"/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_upg_blast_bayonet_ylw" based_on="wpn_fps_m4_lower_reciever" type="bayonet" has_description="true" desc_id="bm_wp_wpn_fps_upg_blast_bayonet_desc" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats concealment="-2" min_damage="17.5" min_damage_effect="1.75" max_damage="17.5" max_damage_effect="1.75"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_fl_lr" based_on="wpn_fps_shot_r870_ris_special" type="gadget_placement" depends_on="gadget" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" third_unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" ver="2">
+		<override>
+			<wpn_fps_addon_ris a_obj="a_fl_left"/>
+			<wpn_fps_upg_fl_ass_smg_sho_peqbox a_obj="a_fl_left"/>
+			<wpn_fps_upg_fl_ass_smg_sho_surefire a_obj="a_fl_left"/>
+			<wpn_fps_upg_fl_ass_peq15 a_obj="a_fl_left"/>
+			<wpn_fps_upg_fl_ass_laser a_obj="a_fl_left"/>
+			<wpn_fps_upg_fl_ass_utg a_obj="a_fl_left"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_iwsd_readout" based_on="wpn_fps_m4_lower_reciever" type="iwsd" has_description="true" wpn_pts="wpn_fps_ass_blast" ver="2"/>
+
+	<WeaponMod id="wpn_fps_upg_blast_mag_fast" based_on="wpn_fps_smg_mp5_m_drum" unit="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_ass_blast_mag" ver="2">
+		<animations reload="reload" reload_not_empty="reload"/>
+		<stats extra_ammo="-5" reload="9"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_mag_size" based_on="wpn_fps_smg_mp5_m_drum" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations reload="reload" reload_not_empty="reload"/>
+		<stats extra_ammo="15" reload="-2"/>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_biolum" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_biolum"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_biolum"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_biolum"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_biolum"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_biolum"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_biolum"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_biolum"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_biolum"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_biolum"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_biolum"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_blood" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_blood"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_blood"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_blood"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_blood"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_blood"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_blood"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_blood"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_blood"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_blood"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_blood"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_carbon" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_carbon"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_carbon"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_carbon"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_carbon"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_carbon"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_carbon"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_carbon"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_carbon"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_carbon"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_carbon"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_greenhex" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_greenhex"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_greenhex"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_greenhex"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_greenhex"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_greenhex"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_greenhex"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_greenhex"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_greenhex"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_greenhex"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_greenhex"/>
+		</override>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_upg_blast_rec_hellbug" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_hellbug"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_hellbug"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_hellbug"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_hellbug"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_hellbug"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_hellbug"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_hellbug"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_hellbug"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_hellbug"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_hellbug"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_hsp" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_hsp"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_hsp"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_hsp"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_hsp"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_hsp"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_hsp"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_hsp"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_hsp"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_hsp"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_hsp"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_jackpot1" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_jackpot1"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_jackpot1"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_jackpot1"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_jackpot1"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_jackpot1"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_jackpot1"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_jackpot1"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_jackpot1"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_jackpot1"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_jackpot1"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_jpdark" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_jpdark"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_jpdark"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_jpdark"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_jpdark"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_jpdark"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_jpdark"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_jpdark"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_jpdark"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_jpdark"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_jpdark"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_krayola" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_krayola"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_krayola"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_krayola"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_krayola"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_krayola"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_krayola"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_krayola"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_krayola"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_krayola"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_krayola"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_lava" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_lava"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_lava"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_lava"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_lava"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_lava"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_lava"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_lava"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_lava"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_lava"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_lava"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_mgjp" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_mgjp"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_mgjp"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_mgjp"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_mgjp"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_mgjp"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_mgjp"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_mgjp"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_mgjp"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_mgjp"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_mgjp"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_neon" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_neon"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_neon"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_neon"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_neon"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_neon"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_neon"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_neon"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_neon"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_neon"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_neon"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_perfected1" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_perfected1"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_perfected1"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_perfected1"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_perfected1"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_perfected1"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_perfected1"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_perfected1"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_perfected1"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_perfected1"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_perfected1"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_plain0s" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_plain0s"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_plain0s"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_plain0s"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_plain0s"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_plain0s"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_plain0s"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_plain0s"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_plain0s"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_plain0s"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_plain0s"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_razer" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_razer"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_razer"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_razer"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_razer"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_razer"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_razer"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_razer"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_razer"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_razer"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_razer"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_smaug" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_smaug"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_smaug"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_smaug"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_smaug"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_smaug"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_smaug"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_smaug"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_smaug"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_smaug"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_smaug"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_starstruck" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_starstruck"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_starstruck"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_starstruck"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_starstruck"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_starstruck"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_starstruck"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_starstruck"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_starstruck"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_starstruck"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_starstruck"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_storm" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_storm"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_storm"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_storm"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_storm"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_storm"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_storm"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_storm"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_storm"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_storm"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_storm"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_symbiote" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_symbiote"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_symbiote"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_symbiote"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_symbiote"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_symbiote"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_symbiote"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_symbiote"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_symbiote"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_symbiote"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_symbiote"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_tribles" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_tribles"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_tribles"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_tribles"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_tribles"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_tribles"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_tribles"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_tribles"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_tribles"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_tribles"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_tribles"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_tron" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_tron"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_tron"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_tron"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_tron"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_tron"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_tron"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_tron"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_tron"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_tron"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_tron"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_uk02s" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_uk02s"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_uk02s"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_uk02s"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_uk02s"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_uk02s"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_uk02s"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_uk02s"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_uk02s"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_uk02s"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_uk02s"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_unk01s" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_unk01s"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_unk01s"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_unk01s"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_unk01s"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_unk01s"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_unk01s"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_unk01s"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_unk01s"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_unk01s"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_unk01s"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_uranium" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_uranium"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_uranium"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_uranium"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_uranium"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_uranium"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_uranium"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_uranium"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_uranium"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_uranium"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_uranium"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_wood" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_wood"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_wood"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_wood"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_wood"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_wood"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_wood"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_wood"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_wood"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_wood"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_wood"/>
+		</override>
+	</WeaponMod>
+
+	<WeaponMod id="wpn_fps_upg_blast_rec_zero" based_on="wpn_fps_m4_lower_reciever" type="jackpointskin" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<animations fire="recoil" fire_steelsight="recoil" reload="reload" reload_not_empty="reload"/>
+		<adds>
+			<value_node value="wpn_fps_ass_blast_sightrail"/>
+		</adds>
+		<override>
+			<wpn_fps_ass_blast_barrel unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_barrel_zero"/>
+			<wpn_fps_ass_blast_mag unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_zero"/>
+			<wpn_fps_ass_blast_scope unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_zero"/>
+			<wpn_fps_ass_blast_sightrail unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_zero"/>
+			<wpn_fps_upg_blast_barrel_apex unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_apex_zero"/>
+			<wpn_fps_upg_blast_barrel_bulwark unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_zero"/>
+			<wpn_fps_upg_blast_barrel_powerbore unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_powerbore_zero"/>
+			<wpn_fps_upg_blast_mag_fast unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_mag_zero"/>
+			<wpn_fps_upg_blast_mag_size unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_mag_size_zero"/>
+			<wpn_fps_upg_blast_stock_ext unit="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_zero"/>
+		</override>
+	</WeaponMod>
+
+    <WeaponMod id="wpn_fps_upg_blast_scanner" based_on="wpn_fps_m4_lower_reciever" type="extra" wpn_pts="wpn_fps_ass_blast" has_description="true" ver="2"/>
+
+	<WeaponMod id="wpn_fps_upg_blast_stock_ext" based_on="wpn_fps_m16_s_solid" wpn_pts="wpn_fps_ass_blast" ver="2">
+		<stats spread="1" recoil="2" concealment="-2"/>
+	</WeaponMod>
+	<Weapon unlock_level="37">
+		<weapon id="blast" based_on="ak5" weapon_hold="blast" damage_near="2000" damage_far="3000" CLIP_AMMO_MAX="55" NR_CLIPS_MAX="4" rays="3" ammo_pickup="7" shell_ejection="effects/payday2/particles/weapons/shells/shell_empty" global_value="def2050blastriflemod">
+			<stats damage="83" spread="16" spread_moving="14" recoil="15" concealment="10"/>
+			<fire_mode_data fire_rate="0.0631578947368421"/>
+			<kick>
+				<standing>
+					<value_node value="0.6"/>
+					<value_node value="0.5"/>
+					<value_node value="-0.7"/>
+					<value_node value="0.4"/>
+				</standing>
+				<crouching>
+					<value_node value="0.6"/>
+					<value_node value="0.5"/>
+					<value_node value="-0.7"/>
+					<value_node value="0.4"/>
+				</crouching>
+				<steelsight>
+					<value_node value="0.5"/>
+					<value_node value="0.4"/>
+					<value_node value="-0.6"/>
+					<value_node value="0.4"/>
+				</steelsight>
+			</kick>
+			<shake fire_multiplier="0.25" fire_steelsight_multiplier="0.2"/>
+			<use_data align_place="right_hand"/>
+			<timers reload_empty="2.63" reload_not_empty="2.63"/>
+			<sounds fire="blast_fire" fire_single="blast_fire" use_fix="true"/>
+		</weapon>
+		<factory id="wpn_fps_ass_blast" unit="units/mods/weapons/wpn_fps_ass_blast/wpn_fps_ass_blast">
+			<animations/>
+			<adds/>
+			<override/>
+			<default_blueprint>
+				<value_node value="wpn_fps_ass_blast_barrel"/>
+				<value_node value="wpn_fps_ass_blast_mag"/>
+				<value_node value="wpn_fps_ass_blast_rec"/>
+				<value_node value="wpn_fps_ass_blast_scope"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_ass_blast_barrel"/>
+				<value_node value="wpn_fps_ass_blast_mag"/>
+				<value_node value="wpn_fps_ass_blast_rec"/>
+				<value_node value="wpn_fps_ass_blast_scope"/>
+
+				<value_node value="wpn_fps_upg_blast_ammo_ap"/>
+				<value_node value="wpn_fps_upg_blast_ammo_fire"/>
+				<value_node value="wpn_fps_upg_blast_ammo_syphon"/>
+				<value_node value="wpn_fps_upg_blast_ammo_stun"/>
+				<value_node value="wpn_fps_upg_blast_ammo_poison"/>
+				<value_node value="wpn_fps_upg_blast_barrel_apex"/>
+				<value_node value="wpn_fps_upg_blast_barrel_bulwark"/>
+				<value_node value="wpn_fps_upg_blast_barrel_powerbore"/>
+				<value_node value="wpn_fps_upg_blast_bayonet"/>
+				<value_node value="wpn_fps_upg_blast_bayonet_grn"/>
+				<value_node value="wpn_fps_upg_blast_bayonet_red"/>
+				<value_node value="wpn_fps_upg_blast_bayonet_ylw"/>
+				<value_node value="wpn_fps_upg_blast_fl_lr"/>
+				<value_node value="wpn_fps_upg_blast_iwsd_readout"/>
+				<value_node value="wpn_fps_upg_blast_mag_fast"/>
+				<value_node value="wpn_fps_upg_blast_mag_size"/>
+				<value_node value="wpn_fps_upg_blast_rec_biolum"/>
+				<value_node value="wpn_fps_upg_blast_rec_blood"/>
+				<value_node value="wpn_fps_upg_blast_rec_carbon"/>
+				<value_node value="wpn_fps_upg_blast_rec_greenhex"/>
+				<value_node value="wpn_fps_upg_blast_rec_hellbug"/>
+				<value_node value="wpn_fps_upg_blast_rec_hsp"/>
+				<value_node value="wpn_fps_upg_blast_rec_jackpot1"/>
+				<value_node value="wpn_fps_upg_blast_rec_jpdark"/>
+				<value_node value="wpn_fps_upg_blast_rec_krayola"/>
+				<value_node value="wpn_fps_upg_blast_rec_lava"/>
+				<value_node value="wpn_fps_upg_blast_rec_mgjp"/>
+				<value_node value="wpn_fps_upg_blast_rec_neon"/>
+				<value_node value="wpn_fps_upg_blast_rec_perfected1"/>
+				<value_node value="wpn_fps_upg_blast_rec_plain0s"/>
+				<value_node value="wpn_fps_upg_blast_rec_razer"/>
+				<value_node value="wpn_fps_upg_blast_rec_smaug"/>
+				<value_node value="wpn_fps_upg_blast_rec_starstruck"/>
+				<value_node value="wpn_fps_upg_blast_rec_storm"/>
+				<value_node value="wpn_fps_upg_blast_rec_symbiote"/>
+				<value_node value="wpn_fps_upg_blast_rec_tribles"/>
+				<value_node value="wpn_fps_upg_blast_rec_tron"/>
+				<value_node value="wpn_fps_upg_blast_rec_uk02s"/>
+				<value_node value="wpn_fps_upg_blast_rec_unk01s"/>
+				<value_node value="wpn_fps_upg_blast_rec_uranium"/>
+				<value_node value="wpn_fps_upg_blast_rec_wood"/>
+				<value_node value="wpn_fps_upg_blast_rec_zero"/>
+				<value_node value="wpn_fps_upg_blast_scanner"/>
+				<value_node value="wpn_fps_upg_blast_stock_ext"/>
+
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_peqbox"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_surefire"/>
+				<value_node value="wpn_fps_upg_fl_ass_peq15"/>
+				<value_node value="wpn_fps_upg_fl_ass_laser"/>
+				<value_node value="wpn_fps_upg_fl_ass_utg"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_large"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_medium"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_small"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_firepig"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_stubby"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_tank"/>
+				<value_node value="wpn_fps_upg_ass_ns_jprifles"/>
+				<value_node value="wpn_fps_upg_ass_ns_linear"/>
+				<value_node value="wpn_fps_upg_ass_ns_surefire"/>
+				<value_node value="wpn_fps_upg_ass_ns_battle"/>
+				<value_node value="wpn_fps_upg_ns_ass_smg_v6"/>
+				<value_node value="wpn_fps_upg_i_singlefire"/>
+				<value_node value="wpn_fps_upg_i_autofire"/>
+				<value_node value="wpn_fps_upg_o_specter"/>
+				<value_node value="wpn_fps_upg_o_aimpoint"/>
+				<value_node value="wpn_fps_upg_o_docter"/>
+				<value_node value="wpn_fps_upg_o_eotech"/>
+				<value_node value="wpn_fps_upg_o_t1micro"/>
+				<value_node value="wpn_fps_upg_o_acog"/>
+				<value_node value="wpn_fps_upg_o_cmore"/>
+				<value_node value="wpn_fps_upg_o_aimpoint_2"/>
+				<value_node value="wpn_fps_upg_o_eotech_xps"/>
+				<value_node value="wpn_fps_upg_o_reflex"/>
+				<value_node value="wpn_fps_upg_o_rx01"/>
+				<value_node value="wpn_fps_upg_o_rx30"/>
+				<value_node value="wpn_fps_upg_o_cs"/>
+				<value_node value="wpn_fps_upg_o_spot"/>
+				<value_node value="wpn_fps_upg_o_xpsg33_magnifier"/>
+				<value_node value="wpn_fps_upg_o_bmg"/>
+				<value_node value="wpn_fps_upg_o_uh"/>
+				<value_node value="wpn_fps_upg_o_fc1"/>
+				<value_node value="wpn_fps_upg_o_sig"/>
+				<value_node value="wpn_fps_upg_o_tf90"/>
+				<value_node value="wpn_fps_upg_o_poe"/>
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="-0.000745363 0.005481 0.000929624 -0.999984" translation="0 0 0"/>
+			</standard>
+			<crouched>
+				<shoulders rotation="-0.000714509 0.305928 -0.000229596 -0.952054" translation="-11.747 -1.601 -6.338"/>
+			</crouched>
+			<steelsight>
+				<shoulders rotation="0 -0 0 -1" translation="-7.022 0 3.889"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+	<Sounds directory="assets\sounds">
+		<sound id="blast_fire" path="blast_regular.ogg" prefix="regular"/>
+		<redirect id="blast_fire" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire" to="ak5_fire_single" prefix="suppressed_c"/>
+		<sound id="blast_fire_bio" path="blast_nanobio.ogg" prefix="regular"/>
+		<redirect id="blast_fire_bio" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire_bio" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire_bio" to="ak5_fire_single" prefix="suppressed_c"/>
+		<sound id="blast_fire_elec" path="blast_nanoelec.ogg" prefix="regular"/>
+		<redirect id="blast_fire_elec" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire_elec" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire_elec" to="ak5_fire_single" prefix="suppressed_c"/>
+		<sound id="blast_fire_incen" path="blast_nanoincen.ogg" prefix="regular"/>
+		<redirect id="blast_fire_incen" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire_incen" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire_incen" to="ak5_fire_single" prefix="suppressed_c"/>
+		<sound id="blast_fire_rad" path="blast_nanorad.ogg" prefix="regular"/>
+		<redirect id="blast_fire_rad" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire_rad" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire_rad" to="ak5_fire_single" prefix="suppressed_c"/>
+		<sound id="blast_fire_syphon" path="blast_nanosyphon.ogg" prefix="regular"/>
+		<redirect id="blast_fire_syphon" to="ak5_fire_single" prefix="suppressed_a"/>
+		<redirect id="blast_fire_syphon" to="ak5_fire_single" prefix="suppressed_b"/>
+		<redirect id="blast_fire_syphon" to="ak5_fire_single" prefix="suppressed_c"/>
+	</Sounds>
+    <AddFiles directory="assets">
+        <auto_generate>
+            <set>
+                <font load="true" unload="false"/>
+            </set>
+        </auto_generate>
+    </AddFiles>
+	<Hooks directory="hooks">
+		<hook file="BlastRifleAmmoGUI.lua" source_file="lib/entry"/>
+		<hook file="newraycastweaponbase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
+		<hook file="shotgunbase.lua" source_file="lib/units/weapons/shotgun/shotgunbase"/>
+	</Hooks>
+</mod>

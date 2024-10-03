@@ -1,0 +1,17 @@
+{
+	"bm_w_vss" : "VSS",
+	"bm_w_vss_desc" : "Penetrates body armor, enemies, shields and walls.\nGraze Skill is disabled with this weapon.",
+	"bm_wp_wpn_fps_upg_vss_irons" : "Iron Sights",
+	"bm_wp_wpn_fps_upg_vss_irons_il" : "Night Sights",
+	"bm_wp_wpn_fps_upg_vss_mag_20rnd" : "20rnd Magazine",
+	"bm_wp_wpn_fps_upg_vss_mag_20rnd_desc" : "30% slower reload speed.",
+	"bm_wp_wpn_fps_upg_vss_mag_30rnd" : "30rnd Magazine",
+	"bm_wp_wpn_fps_upg_vss_mag_30rnd_desc" : "50% slower reload speed.",
+	"bm_wp_wpn_fps_upg_vss_pso_alt" : "PSO-1 Scope without Eyecup",
+	"bm_wp_wpn_fps_upg_vss_rail_midwest" : "Midwest Sight Rail",
+	"bm_wp_wpn_fps_upg_vss_rail_zenit" : "Zenit B-13 Sight Rail",
+	"bm_wp_wpn_fps_upg_vss_stock_alt" : "Removed Cheek Rest",
+	"bm_wp_wpn_fps_upg_vss_stock_folding" : "Folding Stock",
+
+	"menu_l_global_value_vssmod" : "This is a >:3's mod!"
+}

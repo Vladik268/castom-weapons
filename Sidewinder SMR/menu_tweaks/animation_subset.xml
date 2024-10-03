@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/units/menu_character/player_criminal/menu_criminal" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+
+		<target mode="attach">
+			<anim name="ntl_idle_sidewinder" file="anims/shared/special/criminal_idle_sidewinder" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

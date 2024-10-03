@@ -1,0 +1,40 @@
+{
+	"bm_w_pd3_lynx" : "PD3 Lynx",
+	"bm_w_pd3_lynx_desc" : "Hungarian anti-materiel rifle featuring a reciprocating barrel to mitigate recoil impulse from .50 BMG.",
+	"menu_l_global_value_pd3_lynx_mod" : "This is a Payday 3 Item!"
+
+	"bm_menu_bad_lever"        	   : "Battery Assist Device ",
+	"bm_menu_bad_lever_plural" 	   : "Battery Assist Devices",
+	"bm_menu_bipod_cosmetic"        	   : "Cosmetic Bipod",
+	"bm_menu_bipod_cosmetic_plural" 	   : "Cosmetic Bipods",
+	"bm_menu_bolt"        	   : "Bolt",
+	"bm_menu_bolt_plural" 	   : "Bolts",
+	"bm_menu_charging_handle"        	   : "Charging Handle",
+	"bm_menu_charging_handle_plural" 	   : "Charging Handles",
+	"bm_menu_front_post"        	   : "Front Post",
+	"bm_menu_front_post_plural" 	   : "Front Posts",
+	"bm_menu_gadget_placement"         : "Gadget Placement",
+	"bm_menu_gadget_placement_plural"  : "Gadget Placement"
+	"bm_menu_rail_cover"        	   : "Rail Cover",
+	"bm_menu_rail_cover_plural" 	   : "Rail Covers",
+	"bm_menu_irons_folded"        	   : "Folded Iron Sight",
+	"bm_menu_irons_folded_plural" 	   : "Folded Iron Sights",
+	"bm_menu_sound"        			   : "Sound",
+	"bm_menu_sound_plural" 			   : "Sounds",
+	"bm_menu_stock_adapter"        		  	   : "Stock Adapter",
+	"bm_menu_stock_adapter_plural" 	   	  	   : "Stock Adapters",
+	"bm_menu_strap"        		  	   : "Strap",
+	"bm_menu_strap_plural" 	   	  	   : "Straps",
+	"bm_menu_vertical_grip"        		  	   : "Vertical Grip",
+	"bm_menu_vertical_grip_plural" 	   	  	   : "Vertical Grips",
+	
+	"bm_wp_wpn_fps_ass_pd3_lynx_barrel" : "Barrel",
+	"bm_wp_wpn_fps_ass_pd3_lynx_barrel_desc" : " ",
+	"bm_wp_wpn_fps_ass_pd3_lynx_receiver" : "Receiver"
+	"bm_wp_wpn_fps_ass_pd3_lynx_receiver_desc" : " "
+	"bm_wp_wpn_fps_snp_pd3_lynx_scope" : "HET-5 Scope ",
+	"bm_wp_wpn_fps_snp_pd3_lynx_scope_desc" : "Highlights special enemies when you aim at them.",
+	"bm_wp_wpn_fps_snp_pd3_lynx_scope_piggyback" : "HET-5 Backup Irons",
+	"bm_wp_wpn_fps_snp_pd3_lynx_scope_piggyback_desc" : "Adds the option for using the backup iron sights, much like the vanilla scopes and their piggyback sights. This is a separate 'secondary sight' because Payday's integrated attachment code did not want to cooperate.",
+
+}

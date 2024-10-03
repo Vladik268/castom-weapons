@@ -1,0 +1,12 @@
+<unit type="wpn" slot="1">
+	<object file="units/mods/weapons/wpn_fps_snp_vss/wpn_fps_snp_vss"/>
+	<dependencies>
+		<depends_on bnk="soundbanks/weapon_val"/>
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData"/>
+		<extension name="base" class="NewNPCRaycastWeaponBase">
+			<var name="name_id" value="vss_crew"/>
+		</extension>
+	</extensions>
+</unit>

@@ -1,0 +1,222 @@
+<mod name="Malorian Arms 3516 Silverhand" author="PlayBONK, Nakima, Offyerrocker and RJC9000" min_lib_ver="3.38">
+	<Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english"/>
+	</Localization>
+	<AssetUpdates id="40266" version="0.857" provider="modworkshop"/>
+	<GlobalValue id="malorian_3516mod" color="Color(0.7702, 0.7702, 0.2077)"/>
+	
+	<WeaponMod id="wpn_fps_pis_malorian_3516_barrel" based_on="wpn_fps_pis_deagle_b_standard" type="barrel" unit="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_barrel" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_pis_malorian_3516_body" based_on="wpn_fps_pis_deagle_body_standard" type="lower_reciever" unit="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_body" hidden="true" ver="2"/>
+	<WeaponMod id="wpn_fps_pis_malorian_3516_magazine" based_on="wpn_fps_pis_deagle_m_standard" type="magazine"  unit="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_magazine" hidden="true" ver="2">
+		<bullet_objects prefix = "g_malorian_bullet_" amount="2"/>
+	</WeaponMod>
+	<WeaponMod id="wpn_fps_pis_malorian_3516_laser" based_on="wpn_fps_upg_fl_pis_laser" type="gadget" a_obj="a_body" unit="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_laser" hidden="false" global_value="malorian_3516mod" ver="2">
+		<stats spread="0" recoil="0" concealment="0"/>
+	</WeaponMod>
+	
+	<!--Weapon -->
+	<Weapon unlock_level="1">
+		<weapon id="malorian_3516" based_on="deagle" weapon_hold="malorian_3516" CLIP_AMMO_MAX="10" NR_CLIPS_MAX="6" chamber_size="1" lock_slide="true" bullet_class="CyberpunkPowerBulletBase" global_value="malorian_3516mod"
+				has_cp_fire_melee="true"
+				fire_melee_range="400"
+				fire_melee_radius="100"
+				fire_melee_damage="5"
+			>
+			<melee_fire_dot_data
+				dot_trigger_chance="50"
+				dot_damage="10"
+				dot_length="1.6"
+				dot_trigger_max_distance="3000"
+				dot_tick_period="0.5"
+			/>
+			
+			<stats damage="8000" spread="22" spread_moving="20" recoil="9" concealment="26"/>
+			<timers reload_not_empty="1.6" reload_empty="2.6" unequip="0.7" equip="1"/>
+			<fire_mode_data fire_rate="0.4"/>
+			<AMMO_PICKUP>
+				<value_node value="1.0"/>
+				<value_node value="3.0"/>
+			</AMMO_PICKUP>
+			<sounds fire="malorian_3516_fire">
+            </sounds>
+			<kick>
+				<standing>
+					<value_node value="2.0"/>
+					<value_node value="2.5"/>
+					<value_node value="-0.5"/>
+					<value_node value="0.5"/>
+				</standing>
+				<crouching>
+					<value_node value="1.7"/>
+					<value_node value="2.0"/>
+					<value_node value="-0.3"/>
+					<value_node value="0.3"/>
+				</crouching>
+				<steelsight>
+					<value_node value="1.4"/>
+					<value_node value="1.6"/>
+					<value_node value="-0.05"/>
+					<value_node value="0.05"/>
+				</steelsight>
+			</kick>
+			<animations reload_name_id="malorian_3516"/>
+		</weapon>
+		<factory id="wpn_fps_pis_malorian_3516" unit="units/mods/weapons/wpn_fps_pis_malorian_3516/wpn_fps_pis_malorian_3516">
+		<animations reload="reload" fire="recoil" fire_steelsight="recoil_steelsight" reload_not_empty="reload_not_empty" magazine_empty="last_recoil"/>
+		<adds/>
+		<override/>
+			<default_blueprint>
+				<value_node value="wpn_fps_pis_malorian_3516_barrel"/>
+				<value_node value="wpn_fps_pis_malorian_3516_body"/>
+				<value_node value="wpn_fps_pis_malorian_3516_magazine"/>
+				<value_node value="wpn_fps_pis_malorian_3516_laser"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_pis_malorian_3516_barrel"/>
+				<value_node value="wpn_fps_pis_malorian_3516_body"/>
+				<value_node value="wpn_fps_pis_malorian_3516_magazine"/>
+				<value_node value="wpn_fps_pis_malorian_3516_laser"/>
+			</uses_parts>
+		</factory>
+		
+		<stance>
+
+			<standard>
+				<shoulders rotation="0.00786295 0.000786915 0.0109146 -0.999909" translation="-3 -9 4"/>
+			</standard>
+
+			<crouched>
+					<shoulders rotation="0.00723074 0.0228531 0.0111348 -0.999651" translation="-2.072 -7.65 2.599"/>
+			</crouched>
+
+			<steelsight>
+					<shoulders rotation="0.00704513 0.00538882 0.0118184 -0.999891" translation="-11.5 0 7.644"/>
+			</steelsight>
+		
+		</stance>
+		
+	</Weapon>
+
+	
+	<Sounds directory="assets\sounds">
+	
+		<sound id="malorian_3516_fire" path="malorian_fire.ogg" prefix="regular"/>
+		<sound id="malorian_3516_fire" path="malorian_fire.ogg" prefix="suppressed_a"/>
+		<sound id="malorian_3516_fire" path="malorian_fire.ogg" prefix="suppressed_b"/>
+		<sound id="malorian_3516_fire" path="malorian_fire.ogg" prefix="suppressed_c"/>	
+		<sound id="malorian_3516_magout" path="malorian_magout.ogg" prefix="first"/>
+		<sound id="malorian_3516_magout" path="malorian_magout.ogg" prefix="third"/>
+		<sound id="malorian_3516_magin" path="malorian_magin.ogg" prefix="first"/>
+		<sound id="malorian_3516_magin" path="malorian_magin.ogg" prefix="third"/>
+		<sound id="malorian_3516_slide_back" path="malorian_slide_back.ogg" prefix="first"/>		
+		<sound id="malorian_3516_slide_back" path="malorian_slide_back.ogg" prefix="third"/>		
+		<sound id="malorian_3516_slide_release" path="malorian_slide_release.ogg" prefix="first"/>		
+		<sound id="malorian_3516_slide_release" path="malorian_slide_release.ogg" prefix="third"/>		
+		
+		<sound id="malorian_melee" path="malorian_melee.ogg" prefix="first"/>
+		<sound id="malorian_melee" path="malorian_melee.ogg" prefix="third"/>
+		
+		<sound id="malorian_spin_long" path="malorian_spin_long.ogg" prefix="first"/>
+		<sound id="malorian_spin_long" path="malorian_spin_long.ogg" prefix="third"/>
+		
+		<sound id="malorian_spin_short" path="malorian_spin_short.ogg" prefix="first"/>
+		<sound id="malorian_spin_short" path="malorian_spin_short.ogg" prefix="third"/>
+		
+		<sound id="malorian_inspect_enter" path="malorian_inspect_enter.ogg" prefix="first"/>
+		<sound id="malorian_inspect_enter" path="malorian_inspect_enter.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_lock" path="malorian_inspect_lock.ogg" prefix="first"/>
+		<sound id="malorian_inspect_lock" path="malorian_inspect_lock.ogg" prefix="third"/>
+		
+		<sound id="malorian_inspect_open" path="malorian_inspect_open.ogg" prefix="first"/>
+		<sound id="malorian_inspect_open" path="malorian_inspect_open.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_slide_back" path="malorian_inspect_slide_back.ogg" prefix="first"/>
+		<sound id="malorian_inspect_slide_back" path="malorian_inspect_slide_back.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_slide_pull" path="malorian_inspect_slide_pull.ogg" prefix="first"/>
+		<sound id="malorian_inspect_slide_pull" path="malorian_inspect_slide_pull.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_slide_release" path="malorian_inspect_slide_release.ogg" prefix="first"/>
+		<sound id="malorian_inspect_slide_release" path="malorian_inspect_slide_release.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_spin" path="malorian_inspect_spin.ogg" prefix="first"/>
+		<sound id="malorian_inspect_spin" path="malorian_inspect_spin.ogg" prefix="third"/>
+				
+		<sound id="malorian_inspect_unlock" path="malorian_inspect_unlock.ogg" prefix="first"/>
+		<sound id="malorian_inspect_unlock" path="malorian_inspect_unlock.ogg" prefix="third"/>
+				
+
+		<sound id="blank" path="blank.ogg" prefix="first"/>		
+		<sound id="blank" path="blank.ogg" prefix="third"/>	
+		
+	</Sounds>
+	
+		
+	<AddFiles directory="assets">
+	
+		<!-- Animations -->
+		
+		<animation path="anims/fps/malorian_3516/malorian_3516_reload" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_reload_not_empty" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_idle" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_recoil" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_recoil_steelsight" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_equip" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_unequip" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_melee" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_melee_miss" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_use" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_sprint_enter" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_sprint" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_sprint_exit" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_com_var1" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_com_var5" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_com_var6" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_com_var7" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_get_up" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_gogo" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_tased" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_tased_boost" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_tased_exit" load="true"/>
+		<animation path="anims/fps/malorian_3516/malorian_3516_inspect" load="true"/>
+		
+	<!--Unit Base-->
+		<unit_npc path="units/mods/weapons/wpn_fps_pis_malorian_3516/wpn_fps_pis_malorian_3516"/>
+		
+	<!--GUI-->
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/malorian_3516"/>	
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_pis_malorian_3516_laser"/> 
+	
+	<!--Textures-->		
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/weapon_metal_cubemap"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_gray"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_red"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/emissive_yellow"/>
+		   
+		<df_nm_gsma path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base"/>
+		<df_nm_gsma path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_magazine"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_df_cc"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_magazine_df_cc"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_base_op"/>
+	       <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_df"/>
+		   <texture path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/textures/malorian_decals_d01_color_df"/>
+	
+	<!--Unit Paths-->				
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_barrel"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_body"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_magazine"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_laser"/>
+		   
+		   
+	</AddFiles>
+	
+	<Hooks directory="hooks">
+		<hook file="newraycastweaponbase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
+		<hook file="newraycastweaponbase.lua" source_file="lib/units/weapons/menuraycastweaponbase"/>
+		<hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
+		<hook file="playerstandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+		
+	</Hooks>
+	
+</mod>

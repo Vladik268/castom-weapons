@@ -1,0 +1,10 @@
+<unit type="wpn" slot="1">
+	<object file="units/mods/weapons/wpn_fps_at_sidewinder/wpn_fps_at_sidewinder"/>
+
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData"/>
+		<extension name="base" class="SMRWeaponBase">
+			<var name="name_id" value="sidewinder"/>
+		</extension>
+	</extensions>
+</unit>

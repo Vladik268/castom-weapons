@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<tweaks>
+	<!-- Reload Animations -->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/reload"/>
+		</search>
+
+		<target mode="append">
+			<state name="fps/reload/sidewinder" type="once" segment="base" speed="1.0">
+				<anim name="sidewinder_reload"/>
+				<keys>
+					<key at="enter" callback="anim_clbk_stop_weapon_magazine_empty" class_name="base" param1="reload"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_1" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_1"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_2" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_2"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_beeps" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_beeps"/>
+					<key at="trigger" trigger="bullet_show" callback="anim_clbk_check_bullet_object" class_name="base"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_3a" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_3a"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_3b" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_3b"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_4" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_4"/>
+					<key at="trigger" trigger="wp_sidewinder_reload_5" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_5"/>
+				</keys>
+				<exit name="fps/idle"/>
+			</state>
+
+			<state name="fps/reload/sidewinder_classic" type="once" segment="base" speed="1.0">
+				<anim name="sidewinder_reload_classic"/>
+				<keys>
+					<key at="enter" callback="anim_clbk_stop_weapon_magazine_empty" class_name="base" param1="reload"/>
+					<key at="0" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_1"/>
+					<key at="20" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_2"/>
+					<key at="30" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_beeps"/>
+					<key at="40" callback="anim_clbk_check_bullet_object" class_name="base"/>
+					<key at="63" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_3a"/>
+					<key at="75" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_3b"/>
+					<key at="88" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_4"/>
+					<key at="112" callback="play_sound" class_name="base" param1="weapon_sidewinder_reload_5"/>
+				</keys>
+				<exit name="fps/idle"/>
+			</state>
+		</target>
+	</tweak>
+
+	<!-- Single Fire Recoil -->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/recoil"/>
+			<anim name="m4_recoil" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_recoil" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Full Auto Recoil Start-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/recoil_enter"/>
+			<anim name="m4_recoil_enter" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_recoil_enter" weight="sidewinder"/>
+		</target>
+	</tweak>
+	
+	<!--Full Auto Recoil Loop-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/recoil_loop"/>
+			<anim name="m4_recoil_loop" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_recoil_loop" weight="sidewinder"/>
+		</target>
+	</tweak>
+	
+	<!--Full Auto Recoil Exit-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/recoil_exit"/>
+			<anim name="m4_recoil_exit" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_recoil_exit" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!-- Reload State Redirection -->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps"/>
+		</search>
+		<target mode="attach">
+			<to name="reload_sidewinder" 						redirect="fps/reload/sidewinder"/>
+			<to name="reload_not_empty_sidewinder" 				redirect="fps/reload/sidewinder"/>
+			<to name="classic_reload_sidewinder" 				redirect="fps/reload/sidewinder_classic"/>
+			<to name="classic_reload_not_empty_sidewinder" 		redirect="fps/reload/sidewinder_classic"/>
+		</target>
+	</tweak>
+
+	<!--Idle-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/idle"/>
+			<anim name="m4_idle" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_idle" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Equip-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/equip"/>
+			<anim name="m4_equip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_equip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Unequip-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/unequip"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start Sprinting-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/start_running"/>
+			<anim name="m4_sprint_enter" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_sprint_enter" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Sprint Loop-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/running"/>
+			<anim name="m4_sprint" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_sprint" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Stop Sprinting-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/stop_running"/>
+			<anim name="m4_sprint_exit" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_sprint_exit" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Pulling out a melee weapon-->
+	<!--This simply reuses the unequip animation, but it's necessary to define.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/melee_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Putting away your melee-->
+	<!--Similar to the above state. Still necessary to define.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/melee_exit"/>
+			<anim name="m4_equip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_equip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Weapon butt-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/melee"/>
+			<anim name="m4_melee" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_melee" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Weapon butt missed-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/melee_miss"/>
+			<anim name="m4_melee_miss" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_melee_miss" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Instant interaction-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/use"/>
+			<anim name="m4_use" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_use" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Intimidating hostages/get down-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/down"/>
+			<anim name="m4_com_down_var1" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_com_down" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Hands up/Stop moving-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/stop"/>
+			<anim name="m4_com_stop" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_com_stop" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Follow me-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/come"/>
+			<anim name="m4_com_come" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_com_come" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Marking/pointing-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/point"/>
+			<anim name="m4_com_point" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_com_point" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Inspire revive-->
+	<!--Used for long distance revives with Inspire ace-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/get_up"/>
+			<anim name="m4_get_up" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_get_up" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Inspire speedboost-->
+	<!--Used by Inspire basic when you shout at your teammates.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/command/gogo"/>
+			<anim name="m4_gogo" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_gogo" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start throwing a projectile (javelin, knives, etc)-->
+	<!--Reuses the unequip animation.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_projectile_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Stop throwing a projectile-->
+	<!--Reuses the equip animation. -->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_projectile_exit"/>
+			<anim name="m4_equip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_equip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start throwing a Frag Grenade-->
+	<!--Reuses the unequip animation.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_grenade_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start throwing a Molotov-->
+	<!--Reuses the unequip animation.-->
+	<!--There isn't much of a reason for this to be a separate state. Blame Overkill I guess.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_molotov_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start throwing a Concussion Grenade-->
+	<!--Reuses the unequip animation.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_concussion_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Start throwing a Matryoshka Grenade-->
+	<!--Reuses the unequip animation.-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_dada_enter"/>
+			<anim name="m4_unequip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_unequip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Stop throwing a grenade-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/throw_grenade_exit"/>
+			<anim name="m4_equip" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_equip" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Tased-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/tased"/>
+			<anim name="m4_tased" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_tased" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Tased boost-->
+	<!--Used when your view kicks up while being tased-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/tased_boost"/>
+			<anim name="m4_tased_boost" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_tased_boost" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Tased exit-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/tased_exit"/>
+			<anim name="m4_tased_exit" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_tased_exit" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Shockproof Animation-->
+	<!--This state is no longer used in vanilla, but can be re-enabled by mods (so I don't recommend removing it).-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/enter_tazer_counter"/>
+			<anim name="m4_tased_exit" weight="m4"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_tased_exit" weight="sidewinder"/>
+		</target>
+	</tweak>
+
+	<!--Inspect animation-->
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/cash_inspect"/>
+			<anim name="glock_inspect" weight="glock"/>
+		</search>
+		<target mode="append">
+			<anim name="sidewinder_inspect" weight="sidewinder"/>
+		</target>
+	</tweak>
+</tweaks>

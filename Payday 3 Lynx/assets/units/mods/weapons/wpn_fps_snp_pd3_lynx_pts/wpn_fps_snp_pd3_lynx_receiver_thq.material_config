@@ -1,0 +1,38 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_lynx_bipod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod_nm" mip="1"/>
+
+    </material>	
+	<material name="mtr_lynx_bolt" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt_nm" mip="1"/>
+
+    </material>		
+	<material name="mtr_lynx_grip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip_nm" mip="1"/>
+
+    </material>	
+	<material name="mtr_lynx_handguard" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard_nm" mip="1"/>
+
+    </material>	
+	<material name="mtr_lynx_lower" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower_nm" mip="1"/>
+
+    </material>	
+	<material name="mtr_lynx_stock" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock_nm" mip="1"/>
+
+    </material>	
+	<material name="mtr_lynx_upper" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper_nm" mip="1"/>
+
+    </material>	
+	
+</materials>

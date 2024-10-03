@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps/reload"/>
+		</search>
+		
+		<target mode="append">
+			<state name="fps/reload/nckuro" type="once" segment="base" speed="1.0">
+				<anim name="nckuro_reload"/>
+				<keys>
+					<key at="trigger" trigger="wp_ak47_tilt_back" callback="play_sound" class_name="base" param1="wp_ak47_tilt_back"/>
+					<key at="trigger" trigger="wp_tecci_bolt_release" callback="play_sound" class_name="base" param1="wp_tecci_bolt_release"/>
+					<key at="trigger" trigger="wp_foley_generic_back_in_hand" callback="play_sound" class_name="base" param1="wp_foley_generic_back_in_hand"/>
+				</keys>
+				<exit name="fps/idle"/>
+			</state>
+		</target>
+	</tweak>
+
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_states">
+		<search>
+			<xml/>
+			<state name="fps"/>
+		</search>
+		<target mode="attach">
+			<to name="reload_nckuro" 						redirect="fps/reload/nckuro"/>
+			<to name="reload_not_empty_nckuro" 				redirect="fps/reload/nckuro"/>
+		</target>
+	</tweak>
+</tweaks>

@@ -1,0 +1,25 @@
+<dynamic_object>
+	<diesel orientation_object="rp_wpn_fps_pis_x_type54" />
+    <animations>
+		<animation_group name="recoil">
+			<object name="a_recoil" enabled="true"/>
+		</animation_group>	
+		<animation_group name="last_recoil">
+			<object name="a_last_recoil" enabled="true"/>
+		</animation_group>		
+		<animation_group name="reload_right">
+			<object name="anim_bolt_reload_right" enabled="true"/>
+			<object name="anim_m_reload" enabled="true"/>
+		</animation_group>
+		<animation_group name="reload_left">
+			<object name="anim_bolt_reload_left" enabled="true"/>
+			<object name="anim_m_reload_left" enabled="true"/>
+		</animation_group>	
+		<animation_group name="reload_not_empty_right">
+			<object name="anim_m_reload_not_empty" enabled="true"/>
+        </animation_group>
+		<animation_group name="reload_not_empty_left">
+			<object name="anim_m_reload_not_empty_left" enabled="true"/>
+        </animation_group>
+    </animations>
+</dynamic_object>

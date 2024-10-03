@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<unit type="gen" slot="13">
+	<object file="units/mods/weapons/wpn_prj_at_sidewinder_explosive/wpn_prj_at_sidewinder_explosive"/>
+
+	<extensions>
+		<extension name="base" class="SMRGrenade"/>
+		<extension name="unit_data" class="ScriptUnitData"/>
+		<extension name="damage" class="UnitDamage">
+			<var name="_skip_give_body_collision_damage" value="true"/>
+		</extension>
+	</extensions>
+
+	<sounds>
+		<default_soundsource source="rp_arrow_exp"/>
+		<soundsource name="snd" source="rp_arrow_exp"/>
+	</sounds>
+</unit>

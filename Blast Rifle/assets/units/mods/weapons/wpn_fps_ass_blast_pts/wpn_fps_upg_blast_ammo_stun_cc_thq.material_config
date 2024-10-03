@@ -1,0 +1,7 @@
+<materials version="3" group="weapon_group">
+	<material name="mat_glow" render_template="effect:DIFFUSE0_TEXTURE:DIFFUSE0_UVANIM" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_ass_blast_pts/textures/nanoglow_stun_df"/>
+		<variable value="1.25" type="scalar" name="intensity"/>
+		<variable value="0 1 0" type="vector3" name="uv0_speed"/>
+	</material>
+</materials>

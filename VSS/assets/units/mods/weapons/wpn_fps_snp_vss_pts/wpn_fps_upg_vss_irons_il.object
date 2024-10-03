@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_upg_vss_irons_il" orientation_object="rp_vss"/>
+	<graphics>
+		<object enabled="true" name="g_il"/>
+	</graphics>
+</dynamic_object>

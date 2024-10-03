@@ -1,0 +1,52 @@
+<materials version="3">
+	<material name="rail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/rail_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="enter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/enter_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+		<self_illumination_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/enter_il"/>
+		<variable type="scalar" name="il_multiplier" value="desklight"/>
+	</material>
+	<material name="body" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/body_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="trigger" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/trigger_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="body2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/black_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="display" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/display_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+		<self_illumination_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/display_df"/>
+		<variable type="scalar" name="il_multiplier" value="desklight"/>
+	</material>
+	<material name="down" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/down_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="stock" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/stock_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="grip1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/grip1_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="grip2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/grip2_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+	</material>
+	<material name="button" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+		<diffuse_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/button_df" />
+		<bump_normal_texture file="units/payday2/textures/blank_nm" />
+		<self_illumination_texture file="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/button_il"/>
+		<variable type="scalar" name="il_multiplier" value="desklight"/>
+	</material>
+</materials>

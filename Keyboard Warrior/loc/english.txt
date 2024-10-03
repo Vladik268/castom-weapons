@@ -1,0 +1,5 @@
+{
+    "bm_w_nckuro" : "Keyboard Warrior",
+    "bm_w_nckuro_desc" : "Burst fire keyboard gun with homing projectiles to ensure that you really block your haters.",
+    "menu_l_global_value_nckuro" : "This is a Neural Cloud item!"
+}

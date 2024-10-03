@@ -1,0 +1,10 @@
+<dynamic_object>
+    <diesel orientation_object="rp_scope" materials="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_scope"/>
+    <graphics>
+        <object enabled="true" name="g_s7_scope_rail"/>
+		<object enabled="true" name="g_s7_scope_lower"/>
+		<object enabled="true" name="g_s7_scope"/>
+		<object enabled="true" name="g_s7_scope_glass"/>
+		<object enabled="true" name="g_s7_scope_ui"/>
+    </graphics>
+</dynamic_object>

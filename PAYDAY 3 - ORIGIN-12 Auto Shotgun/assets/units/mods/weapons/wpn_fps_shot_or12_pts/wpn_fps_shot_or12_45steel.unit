@@ -1,0 +1,7 @@
+<unit type="wpn" slot="1">
+	<object file="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_45steel" />
+	<extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension name="base" class="WeaponSecondSight" />
+	</extensions>
+</unit>

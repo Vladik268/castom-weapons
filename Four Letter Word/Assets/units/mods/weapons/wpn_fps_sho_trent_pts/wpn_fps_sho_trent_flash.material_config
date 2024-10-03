@@ -1,0 +1,8 @@
+<materials version="3">
+	<material name="mtr_grenade" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION:SELF_ILLUMINATION_BLOOM" version="2">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_sho_trent_pts/trent_df"/>
+        <self_illumination_texture file="units/mods/weapons/wpn_fps_sho_trent_pts/trent_df"/>
+        <variable type="scalar" name="il_multiplier" value="sun"/>
+        <variable type="scalar" name="il_bloom" value="0"/>
+	</material>
+</materials>

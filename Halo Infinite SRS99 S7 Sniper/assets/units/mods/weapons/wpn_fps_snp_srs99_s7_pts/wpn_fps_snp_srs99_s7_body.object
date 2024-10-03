@@ -1,0 +1,18 @@
+<dynamic_object>
+    <diesel orientation_object="rp_body" materials="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_body"/>
+    <animations>		
+		<animation_group name="reload" enabled="false">
+			<object name="anim_reload"/>
+		</animation_group>
+		<animation_group name="recoil" enabled="false">
+			<object name="anim_recoil"/>
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_s7_handguard"/>
+        <object enabled="true" name="g_s7_front_rail"/>
+        <object enabled="true" name="g_s7_front"/>
+		<object enabled="true" name="g_s7_bipod"/>
+		<object enabled="true" name="g_s7_charging_handle"/>
+    </graphics>
+</dynamic_object>

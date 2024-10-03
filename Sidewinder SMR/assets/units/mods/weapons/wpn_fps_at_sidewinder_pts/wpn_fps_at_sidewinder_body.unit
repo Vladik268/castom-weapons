@@ -1,0 +1,14 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_body"/>
+
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data"/>
+		<extension class="SMRDigitalGui" name="digital_gui">
+			<var name="TYPE" value="number"/>
+			<var name="COLOR_TYPE" value="red"/>
+			<var name="BG_COLOR_TYPE " value="yellow"/>
+			<var name="HEIGHT" value="400"/>
+			<var name="_gui_object" value="ammo_display"/>
+		</extension>
+	</extensions>
+</unit>

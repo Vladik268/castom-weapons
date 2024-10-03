@@ -1,0 +1,18 @@
+{
+	
+	"bm_w_malorian_3516" : "Malorian Arms 3516 Silverhand",
+	"bm_w_malorian_3516_desc" : "Wake the *fuck* up, samurai. We got a city to burn.",
+	"menu_l_global_value_malorian_3516mod" : "This is a Cyberpunk 2077 Item!"	
+
+
+	"bm_wp_wpn_fps_pis_malorian_3516_barrel" : "Malorian Barrel",
+	"bm_wp_wpn_fps_pis_malorian_3516_body" : "Malorian Frame",
+	
+	"bm_wp_wpn_fps_pis_malorian_3516_laser" : "Malorian Laser",
+	"bm_wp_wpn_fps_pis_malorian_3516_laser_desc" : "Now complete with CDPR putting the wrong stickers on the flamethrower melee!",
+	
+	"bm_wp_wpn_fps_pis_malorian_3516_magazine" : "Malorian Magazine",
+	
+	
+	}
+	

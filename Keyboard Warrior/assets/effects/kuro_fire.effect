@@ -1,0 +1,60 @@
+<effect force_synch="false">
+    <atom name="glowo" min_size="2" max_size="2" lifetime="0.2" random_start_time="false" start_time="0" preroll="0" inherit_velocity_multiplier="1" fade_in_start="-1" fade_in_length="7" fade_out_start="50" spawn_cull_policy="initialize" cull_policy="update" cull_gracetime="0" max_particle_radius="-1" soundbank="" cue="" ambient="false" grab_relative="effect" grab_pos="0 0 0" grab_radius="200" grab_backfacing="false" timeline="">
+        <initializerstack>
+            <boxrandomvelocity relative="effect" min="0 0 0" max="0 0 0"/>
+            <boxrandomrotation relative="world" min="0 0 0" max="0 0 0" min_rot="0" max_rot="0"/>
+            <localboxrandomposition min="0 0 2" max="0 0 0"/>
+        </initializerstack>
+        <simulatorstack>
+            <worldtransform transform_rotations="true"/>
+        </simulatorstack>
+        <visualizerstack>
+            <billboard texture="effects/textures/effects_atlas" intensity="flashlight" billboard_type="camera_facing" rotation_channel="world_rotation" blend_mode="normal" render_template="effect_op_glow" origo="0.5 0.5" per_particle_age="false" size_input="keys" color_input="constant" color="157 39 203" opacity_input="keys" rotation_input="constant" rotation="0" rotation_axis="0 1 0" uv_size="0.0625 0.0625" uv_offset_input="constant" uv_offset="0.8125 0.75">
+                <size_keys loop="true">
+                    <key t="0" v="25 25"/>
+                    <key t="0.03861003741622" v="50 50"/>
+                    <key t="0.077220074832439" v="30 30"/>
+                    <key t="0.11582999676466" v="40 40"/>
+                </size_keys>
+                <opacity_keys loop="false">
+                    <key t="0" v="255"/>
+                    <key t="0.2" v="0"/>
+                </opacity_keys>
+            </billboard>
+            <light per_particle_age="false" shadow_caster="false" specular="true" color_input="constant" color="157 39 203" multiplier_input="keys" far_range_input="constant" far_range="300">
+                <multiplier_keys loop="false">
+                    <key t="0" v="5"/>
+					<key t="0.2" v="0"/>
+                </multiplier_keys>
+            </light>
+        </visualizerstack>
+    </atom>
+    <atom name="ring" min_size="2" max_size="2" lifetime="0.2" random_start_time="false" start_time="0" preroll="0" inherit_velocity_multiplier="1" fade_in_start="-1" fade_in_length="7" fade_out_start="50" spawn_cull_policy="initialize" cull_policy="update" cull_gracetime="0" max_particle_radius="-1" soundbank="" cue="" ambient="false" grab_relative="effect" grab_pos="0 0 0" grab_radius="200" grab_backfacing="false" timeline="">
+        <initializerstack>
+            <boxrandomvelocity relative="effect" min="0 0 0" max="0 0 0"/>
+            <boxrandomrotation relative="world" min="0 0 0" max="0 0 0" min_rot="0" max_rot="0"/>
+            <localboxrandomposition min="0 0 0" max="0 0 0"/>
+        </initializerstack>
+        <simulatorstack>
+            <worldtransform transform_rotations="true"/>
+        </simulatorstack>
+        <visualizerstack>
+            <billboard texture="effects/textures/kuro_flash_df" intensity="reddot" billboard_type="camera_facing" rotation_channel="world_rotation" blend_mode="normal" render_template="effect_op_glow" origo="0.5 0.5" per_particle_age="false" size_input="keys" color_input="keys" opacity_input="keys" rotation_input="constant" rotation="0" rotation_axis="0 1 0" uv_size="1 1" uv_offset_input="constant" uv_offset="0 0">
+                <size_keys loop="false">
+                    <key t="0" v="5 5"/>
+                    <key t="0.2" v="15 15"/>
+                </size_keys>
+                <color_keys loop="false">
+                    <key t="0.10829102993011" v="157 39 203"/>
+                    <key t="0.27538725733757" v="151 39 203"/>
+                    <key t="0.60240966081619" v="149 39 212"/>
+                    <key t="4.440619468689" v="138 20 214"/>
+                </color_keys>
+                <opacity_keys loop="false">
+                    <key t="0" v="255"/>
+                    <key t="0.2" v="0"/>
+                </opacity_keys>
+            </billboard>
+        </visualizerstack>
+    </atom>
+</effect>

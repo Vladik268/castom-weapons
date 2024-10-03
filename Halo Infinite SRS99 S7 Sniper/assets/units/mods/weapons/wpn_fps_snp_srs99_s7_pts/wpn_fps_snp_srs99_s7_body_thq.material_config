@@ -1,0 +1,21 @@
+<materials version="3" group="weapon_group">
+	
+	<material name="mtr_s7_front" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front_df" mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front_nm" mip="1"/>
+    </material>
+	  <material name="mtr_s7_bipod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_bipod_df" mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_bipod_nm" mip="1"/>
+    </material>
+	<material name="mtr_s7_front_rail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front_rail_df" mip="1" />
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front_rail_nm" mip="1"/>
+    </material>
+	<material name="mtr_s7_handguard" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_handguard_df" mip="1" />
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_handguard_nm" mip="1"/>
+    </material>
+	
+	
+</materials>

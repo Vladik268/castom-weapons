@@ -1,0 +1,49 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_upg_blast_iwsd_readout"/>
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data"/>
+		<extension name="blastrifle_ammo_counter" class="BlastRifleAmmoGUI" >
+			<var name="_gui_object" 					value="a_display" />
+			
+			
+			<var name="reserve_font_name"				value="fonts/font_quantum"/>
+			<var name="magazine_font_name"				value="fonts/font_quantum"/>
+			<var name="rangefinder_font_name"			value="fonts/font_quantum"/>
+			<var name="kills_font_name"					value="fonts/font_quantum"/>
+			<var name="reserve_font_color"				value="ffffff" type="string"/>
+			<var name="magazine_font_color"				value="ffffff" type="string"/>
+			<var name="ammotype_bitmap_rect_x"			value="87" />
+			<var name="ammotype_bitmap_rect_y"			value="22" />
+			<var name="ammotype_bitmap_rect_w"			value="78" />
+			<var name="ammotype_bitmap_rect_h"			value="78" />
+			<var name="ammotype_bitmap_x"				value="30" />
+			<var name="ammotype_bitmap_y"				value="4" />
+			<var name="ammotype_bitmap_w"				value="16" />
+			<var name="ammotype_bitmap_h"				value="16" />
+			<var name="kills_bitmap_x"					value="4" />
+			<var name="kills_font_offset_x"				value="21" />
+			<var name="rangefinder_font_offset_x"		value="-6" />
+			<var name="rangefinder_font_offset_y"		value="22" />
+			<var name="deco_bitmap_texture"				value="units/mods/weapons/wpn_fps_ass_blast_pts/textures/br_counter_bg" />
+			<var name="deco_bitmap_w"					value="120" />
+			<var name="deco_bitmap_h"					value="100" />
+			
+			<var name="magazine_font_size"				value="48" />
+			<var name="magazine_font_offset_y"			value="-20" />
+			<var name="reserve_halign"					value="center" />
+			
+			<var name="num_characters_magazine"			value="2" />
+			<var name="num_characters_reserve"			value="3" />
+			<var name="offset_position_x"				value="0" />
+			<var name="offset_position_y"				value="13.5" />
+			<var name="offset_position_z"				value="9.6" />
+			<var name="offset_rotation_yaw"				value="0" />
+			<var name="offset_rotation_pitch"			value="51.8" />
+			<var name="offset_rotation_roll"			value="0" />
+			<var name="PANEL_WIDTH"						value="120" />
+			<var name="PANEL_HEIGHT"					value="100" />
+			<var name="WORLD_WIDTH"						value="3.2" />
+			<var name="WORLD_HEIGHT"					value="2.5" />
+		</extension>
+	</extensions>
+</unit>

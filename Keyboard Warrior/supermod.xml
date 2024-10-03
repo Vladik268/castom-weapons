@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<mod>
+	<tweak definition="tweaks/animation_states.xml" />
+	<tweak definition="tweaks/animation_subset.xml" />
+</mod>

@@ -1,0 +1,19 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_fal"/>
+    <animations>
+		<animation_group name="fire" enabled="false">
+		</animation_group>
+		<animation_group name="fire_steelsight" enabled="false">
+		</animation_group>
+		<animation_group name="unequip" enabled="false">
+		</animation_group>
+		<animation_group name="equip" enabled="false">
+		</animation_group>
+		<animation_group name="reload" enabled="false">
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false">
+		</animation_group>
+		<animation_group name="recoil" enabled="false">
+		</animation_group>
+	</animations>
+</dynamic_object>

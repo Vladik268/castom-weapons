@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_fl" orientation_object="rp_or12_fl" />
+    <graphics>
+        <object name="g_fl" enabled="true" />
+        <object name="g_light" enabled="false" />
+    </graphics>
+</dynamic_object>

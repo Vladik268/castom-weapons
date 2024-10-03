@@ -1,0 +1,42 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_at_sidewinder_pts/wpn_fps_at_sidewinder_classic_magazine" orientation_object="rp_wpn_fps_at_sidewinder_magazine"/>
+
+	<animations>
+		<animation_group name="reload">
+			<object name="anim_magazine_flap_reload"	enabled="true"/>
+			<object name="anim_round_1_reload"			enabled="true"/>
+			<object name="anim_round_2_reload"			enabled="true"/>
+			<object name="anim_round_3_reload"			enabled="true"/>
+			<object name="anim_round_4_reload"			enabled="true"/>
+			<object name="anim_round_5_reload"			enabled="true"/>
+			<object name="anim_round_6_reload"			enabled="true"/>
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_magazine_flap_recoil"	enabled="true"/>
+			<object name="anim_round_1_recoil"			enabled="true"/>
+			<object name="anim_round_2_recoil"			enabled="true"/>
+			<object name="anim_round_3_recoil"			enabled="true"/>
+			<object name="anim_round_4_recoil"			enabled="true"/>
+			<object name="anim_round_5_recoil"			enabled="true"/>
+			<object name="anim_round_6_recoil"			enabled="true"/>
+		</animation_group>
+	</animations>
+
+	<graphics>
+		<object name="g_magazine"		enabled="true"/>
+		<object name="g_magazine_flap"	enabled="true"/>
+
+		<object name="g_round_1"	enabled="true"/>
+		<object name="g_round_2"	enabled="true"/>
+		<object name="g_round_3"	enabled="true"/>
+		<object name="g_round_4"	enabled="true"/>
+		<object name="g_round_5"	enabled="true"/>
+		<object name="g_round_6"	enabled="true"/>
+
+		<object name="g_link_1"	enabled="true"/>
+		<object name="g_link_2"	enabled="true"/>
+		<object name="g_link_3"	enabled="true"/>
+		<object name="g_link_4"	enabled="true"/>
+		<object name="g_link_5"	enabled="true"/>
+	</graphics>
+</dynamic_object>

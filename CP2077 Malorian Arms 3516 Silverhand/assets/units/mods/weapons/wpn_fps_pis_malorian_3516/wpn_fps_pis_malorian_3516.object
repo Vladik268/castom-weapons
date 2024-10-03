@@ -1,0 +1,23 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_deagle"/>
+	     <animations>
+		<animation_group name="reload">
+			<object name="barrel_reload" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_right">
+			<object name="anim_bolt_reload_right" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_left">
+			<object name="anim_bolt_reload_left" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="barrel_recoil" enabled="true" />
+		</animation_group>
+		<animation_group name="last_recoil">
+			<object name="anim_bolt_last_recoil" enabled="true" />
+		</animation_group>
+		<animation_group name="inspect">
+			<object name="barrel_inspect" enabled="true" />
+		</animation_group>
+    </animations>
+</dynamic_object>

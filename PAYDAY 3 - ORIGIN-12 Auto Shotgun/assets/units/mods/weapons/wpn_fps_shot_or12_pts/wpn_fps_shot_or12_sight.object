@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_sight" orientation_object="rp_or12_sight" />
+    <graphics>
+        <object name="g_reddot" enabled="true" />
+        <object name="g_gfx_lens" enabled="true" />
+        <object name="g_sight" enabled="true" />
+    </graphics>
+</dynamic_object>

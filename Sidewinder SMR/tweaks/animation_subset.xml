@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+
+		<target mode="attach">
+			<anim name="sidewinder_reload" 			file="anims/fps/sidewinder/reload" blend_set="all"/>
+			<anim name="sidewinder_idle" 			file="anims/fps/sidewinder/idle" blend_set="all"/>
+			<anim name="sidewinder_recoil" 			file="anims/fps/sidewinder/recoil" blend_set="all"/>
+			<anim name="sidewinder_recoil_enter" 	file="anims/fps/sidewinder/recoil_enter" blend_set="all"/>
+			<anim name="sidewinder_recoil_loop" 	file="anims/fps/sidewinder/recoil_loop" blend_set="all"/>
+			<anim name="sidewinder_recoil_exit" 	file="anims/fps/sidewinder/recoil_exit" blend_set="all"/>
+			<anim name="sidewinder_equip" 			file="anims/fps/sidewinder/equip" blend_set="all"/>
+			<anim name="sidewinder_unequip" 		file="anims/fps/sidewinder/unequip" blend_set="all"/>
+			<anim name="sidewinder_melee" 			file="anims/fps/sidewinder/melee" blend_set="all"/>
+			<anim name="sidewinder_melee_miss" 		file="anims/fps/sidewinder/melee_miss" blend_set="all"/>
+			<anim name="sidewinder_use" 			file="anims/fps/sidewinder/use" blend_set="all"/>
+			<anim name="sidewinder_sprint_enter" 	file="anims/fps/sidewinder/sprint_enter" blend_set="all"/>
+			<anim name="sidewinder_sprint" 			file="anims/fps/sidewinder/sprint" blend_set="all"/>
+			<anim name="sidewinder_sprint_exit" 	file="anims/fps/sidewinder/sprint_exit" blend_set="all"/>
+			<anim name="sidewinder_com_down" 		file="anims/fps/sidewinder/com_down" blend_set="all"/>
+			<anim name="sidewinder_com_stop" 		file="anims/fps/sidewinder/com_stop" blend_set="all"/>
+			<anim name="sidewinder_com_come" 		file="anims/fps/sidewinder/com_come" blend_set="all"/>
+			<anim name="sidewinder_com_point" 		file="anims/fps/sidewinder/com_point" blend_set="all"/>
+			<anim name="sidewinder_get_up" 			file="anims/fps/sidewinder/get_up" blend_set="all"/>
+			<anim name="sidewinder_gogo" 			file="anims/fps/sidewinder/gogo" blend_set="all"/>
+			<anim name="sidewinder_tased" 			file="anims/fps/sidewinder/tased" blend_set="all"/>
+			<anim name="sidewinder_tased_boost" 	file="anims/fps/sidewinder/tased_boost" blend_set="all"/>
+			<anim name="sidewinder_tased_exit" 		file="anims/fps/sidewinder/tased_exit" blend_set="all"/>
+			<anim name="sidewinder_inspect" 		file="anims/fps/sidewinder/inspect" blend_set="all"/>
+			<anim name="sidewinder_reload_classic" 	file="anims/fps/sidewinder/reload_classic" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

@@ -1,0 +1,9 @@
+{
+	"bm_w_or12" : "ORIGIN-12 Auto Shotgun",
+	"bm_w_or12_desc" : "Bolstering a quick firerate and stopping power, the ORIGIN-12 is capable of easily shredding through anything like thin paper, and dealing massive damage in the process.\n",
+
+        "bm_wp_wpn_fps_shot_or12_sight" : "Sheath RDS (Customizable)",
+        "bm_wp_wpn_fps_shot_or12_fl" : "Assault Flashlight (Customizable)",
+
+	"menu_l_global_value_fiery_hylie_mod" : "This is totally NOT Hylie's modded item!"
+}

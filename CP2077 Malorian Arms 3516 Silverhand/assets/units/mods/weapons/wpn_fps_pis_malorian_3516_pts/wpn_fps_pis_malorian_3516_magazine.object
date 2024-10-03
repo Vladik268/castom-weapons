@@ -1,0 +1,30 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_magazine" orientation_object="rp_magazine"/>
+    <animations>
+		<animation_group name="reload">
+			<object name="mag_align" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_right">
+			<object name="anim_mag_reload_right" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_left">
+			<object name="anim_mag_reload_left" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_not_empty">
+			<object name="mag_align2" enabled="true" />
+        </animation_group>
+		<animation_group name="reload_not_empty_right">
+			<object name="anim_mag_reload_not_empty_right" enabled="true" />
+        </animation_group>
+		<animation_group name="reload_not_empty_left">
+			<object name="anim_mag_reload_not_empty_left" enabled="true" />
+        </animation_group>
+    </animations>
+	<graphics>
+        <object enabled="true" name="g_malorian_magazine" />
+        <object enabled="true" name="g_malorian_bullet_3" />
+        <object enabled="true" name="g_malorian_bullet_2" />
+        <object enabled="true" name="g_malorian_bullet_1" />
+
+    </graphics>
+</dynamic_object>

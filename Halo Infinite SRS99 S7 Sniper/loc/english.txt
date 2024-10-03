@@ -1,0 +1,22 @@
+{
+	"bm_w_srs99_s7" : "SRS99-S7 Anti-Materiel Rifle",
+	"bm_w_srs99_s7_desc" : "I see headshots in your future, Spartan.",
+	
+	"bm_menu_anim" : "Animation",
+	"bm_menu_anim_plural" : "Animations",
+	"bm_menu_gadget_placement" : "Gadget Placement",
+	"bm_menu_gadget_placement_plural" : "Gadget Placement",
+	"bm_menu_bipod_cosm" : "Cosmetic Bipod",
+	"bm_menu_bipod_cosm_plural" : "Cosmetic Bipods",
+	"bm_menu_internals" : "Internals",
+	"bm_menu_internals_plural" : "Internals",
+			
+	"bm_wp_wpn_fps_snp_srs99_s7_internals_flexfire" : "Flexfire Conversion"
+	"bm_wp_wpn_fps_snp_srs99_s7_internals_flexfire_desc" : "Reduce your damage to 25% of its normal value, but increases fire rate by 50%, doubles base ammo count and ammo pickup rates, decreases kick to half of its normal values, increases concealment by 10."
+		
+	"bm_wp_wpn_fps_snp_srs99_s7_scope_accurate" : "100% Accurate Infinite Scope Glint "
+	"bm_wp_wpn_fps_snp_srs99_s7_scope_accurate_desc" : "As bright as the Battlefield 3 flashlight."
+	
+	"menu_l_global_value_srs99_s7mod" : "This is a Misriah Armory Item!"
+	
+}

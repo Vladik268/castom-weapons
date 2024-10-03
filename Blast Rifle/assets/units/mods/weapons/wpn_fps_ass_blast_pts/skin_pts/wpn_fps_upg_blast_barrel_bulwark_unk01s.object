@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_barrel_bulwark_unk01s" orientation_object="rp_blast"/>
+	<graphics>
+		<object name="g_barrel_shroud" enabled="true"/>
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+		
+		<!--
+			Replace all instances of 'example' below with the ID of your animation.
+			Note that recoil_steelsight does not have a unique animation in this example; you can edit the filepath in the 'file' section with one if you wish.
+			If your gun cannot be fired in full auto, you can delete the recoil_enter, recoil_loop, and recoil_exit lines.
+		-->
+		
+		<target mode="attach">
+			<anim name="blast_reload" 								file="anims/fps/blast/blast_reload" blend_set="all"/>
+			<anim name="blast_reload_not_empty" 					file="anims/fps/blast/blast_reload" blend_set="all"/>
+			<anim name="blast_idle" 								file="anims/fps/blast/blast_idle" blend_set="all"/>
+			<anim name="blast_recoil" 								file="anims/fps/blast/blast_recoil" blend_set="all"/>
+			<anim name="blast_recoil_enter" 						file="anims/fps/blast/blast_recoil_enter" blend_set="all"/>
+			<anim name="blast_recoil_loop" 							file="anims/fps/blast/blast_recoil_loop" blend_set="all"/>
+			<anim name="blast_recoil_exit" 							file="anims/fps/blast/blast_recoil_exit" blend_set="all"/>
+			<anim name="blast_recoil_steelsight" 					file="anims/fps/blast/blast_recoil" blend_set="all"/>
+			<anim name="blast_equip" 								file="anims/fps/blast/blast_equip" blend_set="all"/>
+			<anim name="blast_unequip" 								file="anims/fps/blast/blast_unequip" blend_set="all"/>
+			<anim name="blast_melee" 								file="anims/fps/blast/blast_melee" blend_set="all"/>
+			<anim name="blast_melee_miss" 							file="anims/fps/blast/blast_melee_miss" blend_set="all"/>
+			<anim name="blast_use" 									file="anims/fps/blast/blast_use" blend_set="all"/>
+			<anim name="blast_sprint_enter" 						file="anims/fps/blast/blast_sprint_enter" blend_set="all"/>
+			<anim name="blast_sprint" 								file="anims/fps/blast/blast_sprint" blend_set="all"/>
+			<anim name="blast_sprint_exit" 							file="anims/fps/blast/blast_sprint_exit" blend_set="all"/>
+			<anim name="blast_com_down_var1" 						file="anims/fps/blast/blast_com_var1" blend_set="all"/>
+			<anim name="blast_com_stop" 							file="anims/fps/blast/blast_com_var5" blend_set="all"/>
+			<anim name="blast_com_come" 							file="anims/fps/blast/blast_com_var6" blend_set="all"/>
+			<anim name="blast_com_point" 							file="anims/fps/blast/blast_com_var7" blend_set="all"/>
+			<anim name="blast_get_up" 								file="anims/fps/blast/blast_get_up" blend_set="all"/>
+			<anim name="blast_gogo" 								file="anims/fps/blast/blast_gogo" blend_set="all"/>
+			<anim name="blast_tased" 								file="anims/fps/blast/blast_tased" blend_set="all"/>
+			<anim name="blast_tased_boost" 							file="anims/fps/blast/blast_tased_boost" blend_set="all"/>
+			<anim name="blast_tased_exit" 							file="anims/fps/blast/blast_tased_exit" blend_set="all"/>
+			<anim name="blast_inspect" 								file="anims/fps/blast/blast_inspect" blend_set="all"/>
+			<anim name="blast_melee_bayonet"                        file="anims/fps/blast/blast_melee_bayonet" blend_set="all"/>
+            <anim name="blast_melee_miss_bayonet"                   file="anims/fps/blast/blast_melee_miss_bayonet" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

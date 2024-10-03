@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_shot_or12_pts/wpn_fps_shot_or12_barrel" orientation_object="rp_or12_barrel" />
+    <graphics>
+        <object enabled="true" name="g_barrel" />
+    </graphics>
+</dynamic_object>

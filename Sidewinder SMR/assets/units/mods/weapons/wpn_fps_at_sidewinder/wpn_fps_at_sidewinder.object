@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel orientation_object="rp_wpn_fps_at_sidewinder"/>
+
+	<animations>
+		<animation_group name="reload">
+			<object name="anim_magazine_reload" enabled="true"/>
+		</animation_group>
+	</animations>
+</dynamic_object>

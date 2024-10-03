@@ -1,0 +1,172 @@
+<mod name="Halo Infinite SRS99 S7 Sniper Rifle" author="RJC9000" min_lib_ver="3.38">
+	<AssetUpdates id="-3256152" version="0.90" provider="modworkshop"/>
+	<GlobalValue id="srs99_s7mod" color="Color(0.7, 0.2, 0.1)"/>
+	<Localization directory="loc" default="english.txt">
+		<loc file="english.txt" language="english"/>
+	</Localization>
+	
+<!--	units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy 	-->
+	<WeaponMod id="wpn_fps_snp_srs99_s7_barrel" based_on="wpn_fps_ass_fal_fg_standard" type="foregrip" 	unit="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_barrel" drop="false" is_a_unlockable="false" ver="2"/>
+	<WeaponMod id="wpn_fps_snp_srs99_s7_body"   based_on="wpn_fps_ass_fal_body_standard" type="body" 	unit="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_body" drop="false" is_a_unlockable="false" ver="2"/>
+	<WeaponMod id="wpn_fps_snp_srs99_s7_magazine" based_on="wpn_fps_ass_fal_m_standard" type="magazine" unit="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_magazine" drop="false" is_a_unlockable="false" ver="2">
+		<stats reload="3"/>	
+	</WeaponMod>		
+	<WeaponMod id="wpn_fps_snp_srs99_s7_scope" 			based_on="wpn_fps_ass_fal_body_standard" type="sight" 	unit="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_scope" scope_overlay="scope_overlay/srs99_s7_scope_overlay" scope_overlay_border_color="Color(0.735,0,0,0)" scope_overlay_hide_weapon="true" drop="false" is_a_unlockable="false" ver="2">
+		<stats zoom="12"/>	
+	</WeaponMod>		
+	<WeaponMod id="wpn_fps_snp_srs99_s7_stock"   based_on="wpn_fps_ass_fal_g_standard" type="stock" 	unit="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_stock" drop="false" is_a_unlockable="false" ver="2">
+		<stats damage="0" total_ammo_mod="0" concealment="0" spread="0"/>
+	</WeaponMod>		
+
+	<WeaponMod id="wpn_fps_snp_srs99_s7_internals_flexfire" based_on="wpn_fps_ass_fal_body_standard" type="internals" has_description="true" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" drop="false" texture_bundle_folder="mods" is_a_unlockable="true" global_value="srs99_s7mod" ver="2">
+		<override_weapon CLIP_AMMO_MAX="10"/>
+		<stats damage="-106" spread="-5" recoil="5" concealment="10" total_ammo_mod="20"/>
+		<custom_stats ammo_pickup_min_mul="2.0" ammo_pickup_max_mul="3.0" fire_rate_multiplier="1.5" > 	
+		</custom_stats>	
+		<spread_multi>
+			<value_node value="0.5"/>
+			<value_node value="0.5"/>
+		</spread_multi>
+	</WeaponMod>
+
+<!--	Weapon	-->	
+	<Weapon unlock_level="75">
+		<weapon id="srs99_s7" based_on="siltstone" weapon_hold="contraband"  FIRE_MODE="single" CAN_TOGGLE_FIREMODE="false" can_shoot_through_enemy="true" can_shoot_through_shield="true" can_shoot_through_wall="true" armor_piercing_chance="1" CLIP_AMMO_MAX="4" NR_CLIPS_MAX="5" texture_bundle_folder="mods" global_value="srs99_s7mod">
+			<stats_modifiers damage="6"/> 
+			<stats damage="135" spread="24" spread_moving="24" recoil="0" concealment="2" />
+			<timers reload_not_empty="2.2" reload_empty="3.25" unequip="0.6" equip="0.6" />
+			<fire_mode_data fire_rate="0.75"/>
+			<AMMO_PICKUP>
+				<value_node value="1.00"/>
+				<value_node value="1.00"/>
+			</AMMO_PICKUP>
+			<sounds fire="srs99_s7_fire" fire_single="srs99_s7_fire">
+				<reload wp_fn_fal_clip_out="srs99_s7_magout" wp_fn_fal_clip_slide_in="srs99_s7_magin" wp_fn_fal_lever_release="srs99_s7_charge"/>
+			</sounds>
+			<kick>
+				<standing>
+					<value_node value="2.5"/>
+					<value_node value="3.5"/>
+					<value_node value="-1.5"/>
+					<value_node value="1.5"/>
+				</standing>
+				<crouching>
+					<value_node value="2.5"/>
+					<value_node value="3.0"/>
+					<value_node value="-1.2"/>
+					<value_node value="1.2"/>
+				</crouching>
+				<steelsight>
+					<value_node value="1.5"/>
+					<value_node value="2.0"/>
+					<value_node value="-1.2"/>
+					<value_node value="1.2"/>
+				</steelsight>
+			</kick>
+			<animations reload_name_id="fal" recoil_steelsight="true"/>
+		</weapon>
+		<factory id="wpn_fps_snp_srs99_s7" unit="units/mods/weapons/wpn_fps_snp_srs99_s7/wpn_fps_snp_srs99_s7">
+			<animations fire="recoil" reload="reload" reload_not_empty="reload_not_empty" fire_steelsight="recoil"/>
+			<adds/>
+			<override>
+				<wpn_fps_addon_ris unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" /> 
+			</override>
+			<default_blueprint>
+				<value_node value="wpn_fps_snp_srs99_s7_barrel"/>
+				<value_node value="wpn_fps_snp_srs99_s7_body"/>
+				<value_node value="wpn_fps_snp_srs99_s7_magazine"/>
+				<value_node value="wpn_fps_snp_srs99_s7_scope"/>
+				<value_node value="wpn_fps_snp_srs99_s7_stock"/>
+				
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_snp_srs99_s7_barrel"/>
+				<value_node value="wpn_fps_snp_srs99_s7_body"/>
+				<value_node value="wpn_fps_snp_srs99_s7_magazine"/>
+				<value_node value="wpn_fps_snp_srs99_s7_scope"/>
+				<value_node value="wpn_fps_snp_srs99_s7_stock"/>
+				
+				<value_node value="wpn_fps_snp_srs99_s7_internals_flexfire"/>
+						
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_peqbox"/>
+				<value_node value="wpn_fps_upg_fl_ass_smg_sho_surefire"/>
+				<value_node value="wpn_fps_upg_fl_ass_peq15"/>
+				<value_node value="wpn_fps_upg_fl_ass_laser"/>
+				<value_node value="wpn_fps_upg_fl_ass_utg"/>
+				
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="-0.000749669 0.000873371 0.000941822 -0.999999" translation="-1.743 -6.101 -1.29"/>
+			</standard>
+			<crouched>
+				<shoulders rotation="-0.000745315 0.00548101 0.00093835 -0.999984" translation="-3.743 -3.101 -1.79"/>
+			</crouched>
+			<steelsight>
+				<shoulders rotation="-0.000745315 0.00548101 0.00093835 -0.999984" translation="-10.745 -13.101 -5.797"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+	
+		
+	
+	<Sounds directory="assets\sounds">
+		<sound id="srs99_s7_fire" 		path="srs99_s7.ogg" prefix="regular"/>
+		<sound id="srs99_s7_fire" 		path="srs99_s7.ogg" prefix="suppressed_b"/>
+		<sound id="srs99_s7_magout" 	path="srs99_s7_magout.ogg" prefix="first"/>
+		<sound id="srs99_s7_magout" 	path="srs99_s7_magout.ogg" prefix="third"/>
+		<sound id="srs99_s7_magin" 		path="srs99_s7_magin.ogg" prefix="first"/>
+		<sound id="srs99_s7_magin" 		path="srs99_s7_magin.ogg" prefix="third"/>
+		<sound id="srs99_s7_charge" 	path="srs99_s7_charge.ogg" prefix="first"/>		
+		<sound id="srs99_s7_charge" 	path="srs99_s7_charge.ogg" prefix="third"/>	
+	</Sounds>
+	
+<AddFiles directory="assets">
+	<!--Unit NPC-->
+		<unit_npc path="units/mods/weapons/wpn_fps_snp_srs99_s7/wpn_fps_snp_srs99_s7"/>
+	<!--GUI/Scope Overlay-->		
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/srs99_s7"/>			
+		<texture path="scope_overlay/srs99_s7_scope_overlay"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_nornfang_am"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_light_am"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_barrel_short"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_barrel_long"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_bipod_no"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_internals_flexfire"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_snp_srs99_s7_stock_minimal"/>
+
+	<!--Textures-->		
+		<texture	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/weapon_metal_cubemap"/>	
+		
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_barrel_support"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_bipod"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_front_rail"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_handguard"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_magazine"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_muzzle_brake"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lower"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_rail"/>	
+		<df_nm_gsma	    path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad"/>	
+		<texture 		path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_lens_df"/>
+		<texture 		path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_scope_ui_df"/>
+		
+	<!--Unit Path-->				
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_barrel"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_body"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_magazine"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_scope"/>
+		<unit_mat_thq path="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_stock"/>
+
+	</AddFiles>
+	
+	<Hooks directory="Hooks">
+
+	</Hooks>
+</mod>

@@ -1,0 +1,6 @@
+<unit type="static" slot="1" >
+    <object file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_receiver" />
+    <extensions>
+        <extension name="unit_data" class="ScriptUnitData"/>
+    </extensions>
+</unit>

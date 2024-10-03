@@ -1,0 +1,7 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_upg_blast_scanner"/>
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data"/>
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>

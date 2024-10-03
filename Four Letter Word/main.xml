@@ -1,0 +1,131 @@
+<table name="Trent" color="Color(0.8, 0.2, 0.8)">
+	<Localization directory="Loc" default="english.txt"/>
+	<AssetUpdates id="24601" version="1.1" provider="modworkshop"/>
+	<GlobalValue id="trent" color="Color(1, 0.5, 0)"/>
+	
+	<WeaponMod id="wpn_fps_sho_trent_body" based_on="wpn_fps_m4_lower_reciever" type="body" unit="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body" drop="false" is_a_unlockable="false">
+	<stats>
+		<spread_multi>
+			<value_node value="1.4"/>
+			<value_node value="1"/>
+		</spread_multi>
+	</stats>
+	</WeaponMod>
+	
+	<Weapon unlock_level="29">
+		<weapon id="trent" based_on="huntsman" weapon_hold="x_coal" has_magazine="true" CLIP_AMMO_MAX="50" NR_CLIPS_MAX="1" FIRE_MODE="auto" rays="14" texture_bundle_folder="mods" global_value="trent" shell_ejection="effects/payday2/particles/weapons/shells/shell_empty" muzzleflash="effects/trent_fire">
+			<upgrade_blocks>
+				<weapon value="clip_ammo_increase"/>
+			</upgrade_blocks>
+			<stats damage="54" spread="6" spread_moving="6" recoil="26" concealment="22"/>
+			<fire_mode_data fire_rate="0.7"/>
+			<sounds fire="trent_fire" fire_single="trent_fire" fire_auto="trent_fire" use_fix="true"/>
+			<animations reload_name_id=""/>
+			<timers reload_not_empty="0" reload_empty="0"/>
+			<AMMO_PICKUP>
+				<value_node value="2.5"/>
+				<value_node value="2.5"/>
+			</AMMO_PICKUP>
+			<kick>
+				<standing>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+				</standing>
+				<crouching>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+				</crouching>
+				<steelsight>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+					<value_node value="0"/>
+				</steelsight>
+			</kick>
+		</weapon>
+		<factory id="wpn_fps_sho_trent" unit="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent">
+			<animations/>
+			<adds/>
+			<override/>
+			<default_blueprint>
+				<value_node value="wpn_fps_sho_trent_body"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_sho_trent_body"/>
+			</uses_parts>
+		</factory>
+		<stance>
+		<standard>
+			<shoulders rotation="-1.20324e-008 -8.72664e-006 0.00137881 -0.999999" translation="-22 -48 -6.102"/>
+			<vel_overshot pivot="0 0 0" yaw_neg="0" yaw_pos="0" pitch_neg="0" pitch_pos="0"/>
+		</standard>
+		<crouched>
+			<shoulders rotation="-1.20324e-008 -8.72664e-006 0.00137881 -0.999999" translation="-22 -48 -6.102"/>
+			<vel_overshot pivot="0 0 0" yaw_neg="0" yaw_pos="0" pitch_neg="0" pitch_pos="0"/>
+		</crouched>
+		<steelsight>
+			<shoulders rotation="-1.20324e-008 -8.72664e-006 0.00137881 -0.999999" translation="-22 -48 -6.102"/>
+			<vel_overshot pivot="0 0 0" yaw_neg="0" yaw_pos="0" pitch_neg="0" pitch_pos="0"/>
+		</steelsight>
+		</stance>
+	</Weapon>
+	
+	<Sounds directory="Assets\sounds">
+		<sound id="trent_fire" path="trent_fire.ogg" prefix="regular"/>
+		<sound id="trent_jump" path="trent_jump.ogg"/>
+		<sound id="trent_land" path="trent_land.ogg"/>
+		<sound id="trent_land2" path="trent_land2.ogg"/>
+		<sound id="trent_pickup" path="trent_pickup.ogg"/>
+		<sound id="trent_protect" path="trent_protect.ogg"/>
+		<sound id="trent_protect2" path="trent_protect2.ogg"/>
+		<sound id="trent_health" path="trent_health.ogg"/>
+		<sound id="trent_health2" path="trent_health2.ogg"/>
+		<sound id="trent_burn" path="trent_burn.ogg"/>
+		<sound id="trent_burn2" path="trent_burn2.ogg"/>
+		<sound id="trent_damage" path="trent_damage.ogg"/>
+		<sound id="trent_damage2" path="trent_damage2.ogg"/>
+		<sound id="trent_damage3" path="trent_damage3.ogg"/>
+		<sound id="trent_talk" path="trent_talk.ogg"/>
+	</Sounds>
+	<AddFiles directory="Assets">
+		<effect path="effects/trent_fire" load="true"/>
+	
+		<texture path="units/mods/weapons/wpn_fps_sho_trent_pts/trent_df"/>
+
+		<cooked_physics path="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent"/>
+		<model path="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent"/>
+		<object path="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent"/>
+		<unit path="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent"/>
+		<unit path="units/mods/weapons/wpn_fps_sho_trent/wpn_fps_sho_trent_npc"/>
+		
+		<cooked_physics path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body"/>
+		<model path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body" reload="true"/>
+		<object path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body"/>
+		<unit path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body"/>
+		<material_config path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body"/>
+		<material_config path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_body_thq"/>
+		
+		<cooked_physics path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+		<model path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+		<object path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+		<unit path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+		<material_config path="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/trent"/>
+	</AddFiles>
+	<Hooks directory="Hooks">
+		<hook file="playerstandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+		<hook file="playerdamage.lua" source_file="lib/units/beings/player/playerdamage"/>
+		<!--hook file="raycastweaponbase.lua" source_file="lib/units/weapons/raycastweaponbase"/-->
+		<hook file="chatmanager.lua" source_file="lib/managers/chatmanager"/>
+		<hook file="hudmanagerpd2.lua" source_file="lib/managers/hudmanagerpd2"/>
+		<hook file="ammobagbase.lua" source_file="lib/units/equipment/ammo_bag/ammobagbase"/>
+		<hook file="doctorbagbase.lua" source_file="lib/units/equipment/doctor_bag/doctorbagbase"/>
+		<hook file="firstaidkitbase.lua" source_file="lib/units/equipment/first_aid_kit/firstaidkitbase"/>
+		<hook file="grenadecratebase.lua" source_file="lib/units/equipment/grenade_crate/grenadecratebase"/>
+	</Hooks>
+</table>

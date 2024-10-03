@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_upg_blast_stock_ext_krayola" orientation_object="rp_blast"/>
+	<graphics>
+		<object name="g_stock" enabled="true"/>
+		<object name="g_stock2" enabled="true"/>
+	</graphics>
+</dynamic_object>

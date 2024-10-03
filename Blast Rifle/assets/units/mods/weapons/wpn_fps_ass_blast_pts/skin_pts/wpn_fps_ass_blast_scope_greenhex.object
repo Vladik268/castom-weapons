@@ -1,0 +1,11 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_scope_greenhex" orientation_object="rp_blast"/>
+	<graphics>
+		<object name="g_lens_ads" enabled="false"/>
+		<object name="g_lens_solid" enabled="true"/>
+		<object name="g_reticle" enabled="true"/>
+		<object name="g_scope" enabled="true"/>
+		<object name="g_scope2" enabled="true"/>
+		<object name="g_scope_ads" enabled="false"/>
+	</graphics>
+</dynamic_object>

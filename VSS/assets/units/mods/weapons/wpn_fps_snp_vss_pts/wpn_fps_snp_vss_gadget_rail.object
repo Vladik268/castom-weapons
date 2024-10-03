@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_snp_vss_gadget_rail" orientation_object="rp_vss"/>
+	<graphics>
+		<object name="g_gadget_rail" enabled="true" inherit_bounding_volume="co_culling"/>
+	</graphics>
+</dynamic_object>

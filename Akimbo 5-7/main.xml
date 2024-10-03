@@ -1,0 +1,101 @@
+<table name="Akimbo 5/7" priority="-30">
+	<AssetUpdates id="34391" version="1.0" provider="modworkshop"/>
+
+	<Localization directory="Localization" default="english.txt"/>
+
+	<Hooks directory="Hooks">
+		<hook file="weaponfactorytweakdata.lua"	source_file="lib/tweak_data/weaponfactorytweakdata"/>
+		<hook file="weapontweakdata.lua"				source_file="lib/tweak_data/weapontweakdata"/>
+	</Hooks>
+
+	<!-- Akimbo 5/7 -->
+	<Weapon unlock_level="26">
+		<weapon id="x_lemming" based_on="lemming" weapon_hold="jowi_pistol" global_value="pd2_clan">
+			<use_data selection_index="2"/>
+			<categories>
+				<value_node value="akimbo"/>
+				<value_node value="pistol"/>
+			</categories>
+			<animations has_steelsight_stance="true" recoil_steelsight="true" magazine_empty="last_recoil">
+				<second_gun_versions reload="reload_left" reload_not_empty="reload_not_empty_left"/>
+			</animations>
+			<timers reload_not_empty="3.17" reload_empty="4" unequip="0.5" equip="0.5"/>
+			<sound fire="lemming_fire" enter_steelsight="pistol_steel_sight_enter" leave_steelsight="pistol_steel_sight_exit" dryfire="secondary_dryfire" magazine_empty="wp_akimbo_pistol_slide_lock"/>
+		</weapon>
+		<factory id="wpn_fps_pis_x_lemming" unit="units/mods/weapons/wpn_fps_pis_x_lemming/wpn_fps_pis_x_lemming">
+			<default_blueprint>
+				<value_node value="wpn_fps_pis_lemming_b_standard"/>
+				<value_node value="wpn_fps_pis_lemming_body"/>
+				<value_node value="wpn_fps_pis_lemming_m_standard"/>
+				<value_node value="wpn_fps_pis_lemming_mag_release"/>
+				<value_node value="wpn_fps_pis_lemming_sl_standard"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_pis_lemming_b_standard"/>
+				<value_node value="wpn_fps_pis_lemming_body"/>
+				<value_node value="wpn_fps_pis_lemming_m_standard"/>
+				<value_node value="wpn_fps_pis_lemming_mag_release"/>
+				<value_node value="wpn_fps_pis_lemming_sl_standard"/>
+
+				<value_node value="wpn_fps_pis_lemming_b_nitride"/>
+
+				<value_node value="wpn_fps_pis_lemming_m_ext"/>
+
+				<value_node value="wpn_fps_upg_ns_pis_large"/>
+				<value_node value="wpn_fps_upg_ns_pis_medium"/>
+				<value_node value="wpn_fps_upg_ns_pis_small"/>
+				<value_node value="wpn_fps_upg_ns_pis_large_kac"/>
+				<value_node value="wpn_fps_upg_ns_pis_medium_gem"/>
+				<value_node value="wpn_fps_upg_ns_pis_medium_slim"/>
+				<value_node value="wpn_fps_upg_ns_pis_meatgrinder"/>
+				<value_node value="wpn_fps_upg_ns_pis_ipsccomp"/>
+				<value_node value="wpn_fps_upg_pis_ns_flash"/>
+				<value_node value="wpn_fps_upg_ns_ass_filter"/>
+				<value_node value="wpn_fps_upg_ns_pis_jungle"/>
+				<value_node value="wpn_fps_upg_ns_pis_typhoon"/>
+
+				<value_node value="wpn_fps_upg_fl_pis_laser"/>
+				<value_node value="wpn_fps_upg_fl_pis_tlr1"/>
+				<value_node value="wpn_fps_upg_fl_pis_crimson"/>
+				<value_node value="wpn_fps_upg_fl_pis_x400v"/>
+				<value_node value="wpn_fps_upg_fl_pis_m3x"/>
+			</uses_parts>
+			<optional_types>
+				<value_node value="barrel_ext"/>
+				<value_node value="gadget"/>
+			</optional_types>
+			<animations fire="recoil" fire_steelsight="recoil" magazine_empty="last_recoil" reload="reload_right" reload_left="reload_left" reload_not_empty="reload_not_empty_right" reload_not_empty_left="reload_not_empty_left"/>
+			<override>
+				<wpn_fps_upg_ns_pis_large parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_medium parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_small parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_large_kac parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_medium_gem parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_medium_slim parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_meatgrinder parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_ipsccomp parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_pis_ns_flash parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_ass_filter parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_jungle parent="barrel" a_obj="a_ns"/>
+				<wpn_fps_upg_ns_pis_typhoon parent="barrel" a_obj="a_ns"/>
+			</override>
+		</factory>
+		<stance>
+			<crouched>
+				<shoulders rotation="0 -0 0 -1" translation="-0.426 -10.331 -2.341"/>
+			</crouched>
+			<standard>
+				<shoulders rotation="0 -0 0 -1" translation="-0.426 -8.331 -4.341"/>
+			</standard>
+			<steelsight>
+				<shoulders rotation="0 -0 0 -1" translation="-0.426 -1.331 -2.341"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+
+	<AddFiles directory="assets">
+	<!-- Akimbo 5/7 -->
+		<unit_npc	path="units/mods/weapons/wpn_fps_pis_x_lemming/wpn_fps_pis_x_lemming"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/x_lemming"/>
+	</AddFiles>
+</table>

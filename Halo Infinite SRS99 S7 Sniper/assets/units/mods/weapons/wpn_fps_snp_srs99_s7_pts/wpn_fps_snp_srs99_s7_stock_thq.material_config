@@ -1,0 +1,20 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_s7_chinrest" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest_df" mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_chinrest_nm" mip="1"/>
+    </material>
+	<material name="mtr_s7_rear_lower" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+		<diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower_df" mip="1"/>
+        <bump_normal_texture 	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_lower_nm" mip="1"/>
+    </material>
+	<material name="mtr_s7_rear_upper" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+       <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper_df" mip="1"/>
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_rear_upper_nm" mip="1"/>
+    </material>
+	<material name="mtr_s7_stock_pad" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
+        <diffuse_texture 		file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad_df" mip="1"/>
+        <bump_normal_texture	file="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/textures/s7_stock_pad_nm" mip="1"/>
+    </material>
+	
+	
+</materials>

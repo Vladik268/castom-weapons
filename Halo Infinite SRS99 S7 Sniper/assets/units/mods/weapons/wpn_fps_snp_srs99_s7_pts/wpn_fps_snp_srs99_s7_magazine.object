@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_magazine" materials="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_magazine"/>
+    <animations>		
+		<animation_group name="reload" enabled="false">
+			<object name="anim_reload"/>
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false">
+			<object name="anim_reload_not_empty"/>
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_s7_magazine"/>
+    </graphics>
+</dynamic_object>

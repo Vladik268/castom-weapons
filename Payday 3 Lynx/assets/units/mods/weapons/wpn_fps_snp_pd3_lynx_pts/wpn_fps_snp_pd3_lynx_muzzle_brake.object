@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/wpn_fps_snp_pd3_lynx_muzzle_brake" orientation_object="rp_muzzle_brake" />
+
+  <graphics>
+		<object  name="g_lynx_muzzle" enabled="true" />
+
+
+  </graphics>
+</dynamic_object>

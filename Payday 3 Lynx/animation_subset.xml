@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+			
+		<target mode="attach">
+			<anim name="lynx_reload" 								file="anims/fps/lynx/lynx_reload" blend_set="all"/>
+			<anim name="lynx_reload_not_empty" 						file="anims/fps/lynx/lynx_reload_not_empty" blend_set="all"/>
+			<anim name="lynx_equip" 								file="anims/fps/lynx/lynx_equip" blend_set="all"/>
+			<anim name="lynx_recoil" 								file="anims/fps/lynx/lynx_recoil" blend_set="all"/>
+			<anim name="lynx_recoil_steelsight" 					file="anims/fps/shepheard/shepheard_recoil_exit" blend_set="all"/>
+
+
+			<anim name="lynx_idle" 				file="anims/fps/shepheard/shepheard_idle" blend_set="all"/>
+			<anim name="lynx_unequip" 			file="anims/fps/shepheard/shepheard_unequip" blend_set="all"/>
+			<anim name="lynx_melee" 			file="anims/fps/shepheard/shepheard_melee" blend_set="all"/>
+			<anim name="lynx_melee_miss" 		file="anims/fps/shepheard/shepheard_melee_miss" blend_set="all"/>
+			<anim name="lynx_use" 				file="anims/fps/shepheard/shepheard_use" blend_set="all"/>
+			<anim name="lynx_sprint_enter" 		file="anims/fps/shepheard/shepheard_sprint_enter" blend_set="all"/>
+			<anim name="lynx_sprint" 			file="anims/fps/shepheard/shepheard_sprint" blend_set="all"/>
+			<anim name="lynx_sprint_exit" 		file="anims/fps/shepheard/shepheard_sprint_exit" blend_set="all"/>
+			<anim name="lynx_com_down_var1" 	file="anims/fps/shepheard/shepheard_com_var1" blend_set="all"/>
+			<anim name="lynx_com_stop" 			file="anims/fps/shepheard/shepheard_com_var5" blend_set="all"/>
+			<anim name="lynx_com_come" 			file="anims/fps/shepheard/shepheard_com_var6" blend_set="all"/>
+			<anim name="lynx_com_point" 		file="anims/fps/shepheard/shepheard_com_var7" blend_set="all"/>
+			<anim name="lynx_get_up" 			file="anims/fps/shepheard/shepheard_get_up" blend_set="all"/>
+			<anim name="lynx_gogo" 				file="anims/fps/shepheard/shepheard_gogo" blend_set="all"/>
+			<anim name="lynx_tased" 			file="anims/fps/shepheard/shepheard_tased" blend_set="all"/>
+			<anim name="lynx_tased_boost" 		file="anims/fps/shepheard/shepheard_tased_boost" blend_set="all"/>
+			<anim name="lynx_tased_exit" 		file="anims/fps/shepheard/shepheard_tased_exit" blend_set="all"/>
+			<anim name="lynx_inspect" 			file="anims/fps/shepheard/shepheard_inspect" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/skin_pts/wpn_fps_ass_blast_sightrail_razer" orientation_object="rp_blast"/>
+	<graphics>
+		<object name="g_sight_rail" enabled="true"/>
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,98 @@
+<table name="Keyboard Warrior" color="Color(0.8, 0.2, 0.8)">
+	<AssetUpdates id="41767" version="1" provider="modworkshop"/>
+	<GlobalValue id="nckuro" color="Color(0.8, 0.2, 0.8)"/>
+    <Localization directory="loc" default="english.txt">
+        <loc file="english.txt" language="english"/>
+    </Localization>
+	
+	<WeaponMod id="wpn_fps_spe_nckuro_body" based_on="wpn_fps_pis_breech_body" type="body" unit="units/mods/weapons/wpn_fps_spe_nckuro_pts/wpn_fps_spe_nckuro_body" drop="false" is_a_unlockable="false"/>
+	
+	<WeaponMod id="wpn_fps_spe_nckuro_b_dummy" based_on="wpn_fps_pis_breech_b_standard" type="barrel" a_obj="a_b" unit="units/mods/weapons/wpn_fps_spe_nckuro_pts/wpn_fps_spe_nckuro_b_dummy" drop="false" is_a_unlockable="false"/>
+	<Weapon unlock_level="80">
+		<weapon id="nckuro" FIRE_MODE="burst" CAN_TOGGLE_FIREMODE="false" based_on="tecci" weapon_hold="tecci" CLIP_AMMO_MAX="30" NR_CLIPS_MAX="2" armor_piercing_chance="1" texture_bundle_folder="mods" global_value="nckuro" ignore_damage_upgrades="true" has_description="true" shell_ejection="effects/payday2/particles/weapons/shells/shell_empty" muzzleflash="effects/kuro_fire">
+			<categories>
+				<value_node value="grenade_launcher"/>
+			</categories>
+			<upgrade_blocks>
+				<weapon>
+					<value_node value="clip_ammo_increase"/>
+				</weapon>
+			</upgrade_blocks>
+			<stats damage="32" spread="20" spread_moving="20" concealment="8" reload="6"/>
+			<stats_modifiers damage="10"/>
+			<AMMO_PICKUP>
+				<value_node value="1"/>
+				<value_node value="1.3"/>
+			</AMMO_PICKUP>
+			<fire_mode_data fire_rate="0.1" burst_cooldown="0.3"/>
+			<animations reload_name_id="nckuro"/>
+			<sounds fire="nckuro_fire1" fire_single="nckuro_fire1" fire_auto="nckuro_fire1" magazine_empty="" use_fix="true"/>
+			<timers reload_not_empty="0.867" reload_empty="0.867"/>
+		</weapon>
+		<factory id="wpn_fps_spe_nckuro" unit="units/mods/weapons/wpn_fps_spe_nckuro/wpn_fps_spe_nckuro">
+			<animations/>
+			<adds/>
+			<override/>
+			<default_blueprint>
+				<value_node value="wpn_fps_spe_nckuro_body"/>
+				<value_node value="wpn_fps_spe_nckuro_b_dummy"/>
+			</default_blueprint>
+			<uses_parts>
+				<value_node value="wpn_fps_spe_nckuro_body"/>
+				<value_node value="wpn_fps_spe_nckuro_b_dummy"/>
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="8.72665e-006 -0 0 -1" translation="-0.731 0.723 -1.641"/>
+			</standard>
+			<steelsight>
+				<shoulders rotation="8.72665e-006 -0 0 -1" translation="-2.731 0.723 0.359"/>
+			</steelsight>
+			<crouched>
+				<shoulders rotation="8.72665e-006 -0 0 -1" translation="-0.731 0.223 -0.641"/>
+			</crouched>
+		</stance>
+	</Weapon>
+	
+	<Sounds directory="assets\sounds">
+		<sound id="nckuro_fire1" path="nckuro_fire1.ogg"/>
+	</Sounds>
+	<AddFiles directory="assets">
+		<animation path="anims/fps/nckuro/nckuro_reload" load="true"/>
+	
+		<unit_obj path="units/mods/weapons/wpn_fps_spe_nckuro/wpn_fps_spe_nckuro"/>
+
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_spe_nckuro_pts/wpn_fps_spe_nckuro_body"/>
+		
+		<unit_obj path="units/mods/weapons/wpn_fps_spe_nckuro_pts/wpn_fps_spe_nckuro_b_dummy"/>
+		
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/body_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/button_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/button_il"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/display_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/down_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/enter_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/enter_il"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/grip1_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/grip2_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/rail_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/stock_df"/>
+		<texture path="units/mods/weapons/wpn_fps_spe_nckuro_pts/textures/trigger_df"/>
+
+		<effect path="effects/kuro_trail" load="true"/>
+		<effect path="effects/kuro_glow" load="true"/>
+		<effect path="effects/kuro_fire" load="true"/>
+		<texture path="effects/textures/kuro_trail_df"/>
+		<texture path="effects/textures/kuro_flash_df"/>
+		<unit_obj path="units/mods/weapons/wpn_prj_nckuro_exp/wpn_prj_nckuro_exp"/>
+
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/nckuro"/>
+		<texture path="guis/textures/pd2/blackmarket/icons/weapons/outline/nckuro"/>
+	</AddFiles>
+	<Hooks directory="hooks">
+		<hook file="KuroWeaponBase.lua" source_file="lib/units/weapons/projectileweaponbase"/>
+		<hook file="KuroGrenade.lua" source_file="lib/units/weapons/projectiles/projectilebase"/>
+		<hook file="MenuKuroWeaponBase.lua" source_file="lib/units/weapons/menushotgunbase"/>
+	</Hooks>
+</table>

@@ -1,0 +1,37 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_upg_blast_rec_razer" orientation_object="rp_blast"/>
+	<animations>
+		<animation_group name="recoil">
+			<object name="anim_flaps_bottom1_left_recoil" enabled="true"/>
+			<object name="anim_flaps_bottom1_right_recoil" enabled="true"/>
+			<object name="anim_flaps_bottom2_left_recoil" enabled="true"/>
+			<object name="anim_flaps_bottom2_right_recoil" enabled="true"/>
+			<object name="anim_flaps_top1_left_recoil" enabled="true"/>
+			<object name="anim_flaps_top1_right_recoil" enabled="true"/>
+			<object name="anim_flaps_top2_left_recoil" enabled="true"/>
+			<object name="anim_flaps_top2_right_recoil" enabled="true"/>
+		</animation_group>
+		<animation_group name="reload">
+			<object name="anim_flaps_bottom1_left_reload" enabled="true"/>
+			<object name="anim_flaps_bottom1_right_reload" enabled="true"/>
+			<object name="anim_flaps_bottom2_left_reload" enabled="true"/>
+			<object name="anim_flaps_bottom2_right_reload" enabled="true"/>
+			<object name="anim_flaps_top1_left_reload" enabled="true"/>
+			<object name="anim_flaps_top1_right_reload" enabled="true"/>
+			<object name="anim_flaps_top2_left_reload" enabled="true"/>
+			<object name="anim_flaps_top2_right_reload" enabled="true"/>
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_barrel_flaps_bottom1_left" enabled="true"/>
+		<object name="g_barrel_flaps_bottom1_right" enabled="true"/>
+		<object name="g_barrel_flaps_bottom2_left" enabled="true"/>
+		<object name="g_barrel_flaps_bottom2_right" enabled="true"/>
+		<object name="g_barrel_flaps_top1_left" enabled="true"/>
+		<object name="g_barrel_flaps_top1_right" enabled="true"/>
+		<object name="g_barrel_flaps_top2_left" enabled="true"/>
+		<object name="g_barrel_flaps_top2_right" enabled="true"/>
+		<object name="g_rec" enabled="true"/>
+		<object name="g_rec2" enabled="true"/>
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_upg_blast_scanner" orientation_object="rp_blast_scanner"/>
+	<sequence_manager file="units/mods/weapons/wpn_fps_ass_blast_pts/wpn_fps_upg_blast_scanner" />
+	<graphics>
+		<object name="g_frame" enabled="true"/>
+		<object name="g_screen" enabled="true"/>
+		<object name="g_scan" enabled="true"/>
+	</graphics>
+</dynamic_object>

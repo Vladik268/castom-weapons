@@ -1,0 +1,16 @@
+<effect force_synch="false">
+    <use name="effects/payday2/particles/weapons/fps_parts/fps_combo_light_all"/>
+    <atom name="umu" min_size="2" max_size="2" lifetime="0.1" random_start_time="false" start_time="0" preroll="0" inherit_velocity_multiplier="1" fade_in_start="-1" fade_in_length="0" fade_out_start="5" spawn_cull_policy="initialize" cull_policy="update" cull_gracetime="0" max_particle_radius="-1" soundbank="" cue="" ambient="false" grab_relative="effect" grab_pos="0 0 0" grab_radius="200" grab_backfacing="false" timeline="">
+        <initializerstack>
+            <boxrandomvelocity relative="effect" min="0 0 0" max="0 0 0"/>
+            <boxrandomrotation relative="world" min="0 0 0" max="0 0 0" min_rot="0" max_rot="0"/>
+            <localboxrandomposition min="0.2 -7 -4" max="0.2 -7 -4"/>
+        </initializerstack>
+        <simulatorstack>
+            <worldtransform transform_rotations="true"/>
+        </simulatorstack>
+        <visualizerstack>
+            <model model="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash" object="g_grenade" material_config="units/mods/weapons/wpn_fps_sho_trent_pts/wpn_fps_sho_trent_flash"/>
+        </visualizerstack>
+    </atom>
+</effect>

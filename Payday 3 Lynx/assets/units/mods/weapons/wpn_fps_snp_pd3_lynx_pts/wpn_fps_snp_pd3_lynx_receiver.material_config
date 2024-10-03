@@ -1,0 +1,44 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_lynx_bipod" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bipod_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_lynx_bolt" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_bolt_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>		
+	<material name="mtr_lynx_grip" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_grip_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_lynx_handguard" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_handguard_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_lynx_lower" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_lower_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_lynx_stock" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_stock_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+	<material name="mtr_lynx_upper" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DEPTH_SCALING:DIFFUSE_TEXTURE:GLOSS_BLURS_CUBEMAP:GSMA_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture 	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper_df"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper_nm"/>
+        <material_texture	 file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/lynx_upper_gsma"/>
+		<reflection_texture type="cubemap" file="units/mods/weapons/wpn_fps_snp_pd3_lynx_pts/textures/weapon_metal_cubemap"/>
+    </material>	
+</materials>

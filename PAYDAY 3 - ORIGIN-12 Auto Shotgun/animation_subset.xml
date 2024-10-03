@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/fps/fps_spawn" extension="animation_subset">
+		<search>
+			<xml/>
+		</search>
+		
+		<!--
+			Replace all instances of 'or12' below with the ID of your animation.
+			Note that recoil_steelsight does not have a unique animation in this or12; you can edit the filepath in the 'file' section with one if you wish.
+			If your gun cannot be fired in full auto, you can delete the recoil_enter, recoil_loop, and recoil_exit lines.
+		-->
+		
+		<target mode="attach">
+			<anim name="or12_reload" 								file="anims/fps/or12/or12_reload" blend_set="all"/>
+			<anim name="or12_reload_not_empty" 						file="anims/fps/or12/or12_reload_not_empty" blend_set="all"/>
+			<anim name="or12_idle" 									file="anims/fps/or12/or12_idle" blend_set="all"/>
+			<anim name="or12_recoil" 								file="anims/fps/or12/or12_recoil" blend_set="all"/>
+			<anim name="or12_recoil_enter" 							file="anims/fps/or12/or12_recoil_enter" blend_set="all"/>
+			<anim name="or12_recoil_loop" 							file="anims/fps/or12/or12_recoil_loop" blend_set="all"/>
+			<anim name="or12_recoil_exit" 							file="anims/fps/or12/or12_recoil_exit" blend_set="all"/>
+			<anim name="or12_recoil_steelsight" 						file="anims/fps/or12/or12_recoil" blend_set="all"/>
+			<anim name="or12_equip" 									file="anims/fps/or12/or12_equip" blend_set="all"/>
+			<anim name="or12_unequip" 								file="anims/fps/or12/or12_unequip" blend_set="all"/>
+			<anim name="or12_melee" 									file="anims/fps/or12/or12_melee" blend_set="all"/>
+			<anim name="or12_melee_miss" 							file="anims/fps/or12/or12_melee_miss" blend_set="all"/>
+			<anim name="or12_use" 									file="anims/fps/or12/or12_use" blend_set="all"/>
+			<anim name="or12_sprint_enter" 							file="anims/fps/or12/or12_sprint_enter" blend_set="all"/>
+			<anim name="or12_sprint" 								file="anims/fps/or12/or12_sprint" blend_set="all"/>
+			<anim name="or12_sprint_exit" 							file="anims/fps/or12/or12_sprint_exit" blend_set="all"/>
+			<anim name="or12_com_down_var1" 							file="anims/fps/or12/or12_com_var1" blend_set="all"/>
+			<anim name="or12_com_stop" 								file="anims/fps/or12/or12_com_var5" blend_set="all"/>
+			<anim name="or12_com_come" 								file="anims/fps/or12/or12_com_var6" blend_set="all"/>
+			<anim name="or12_com_point" 								file="anims/fps/or12/or12_com_var7" blend_set="all"/>
+			<anim name="or12_get_up" 								file="anims/fps/or12/or12_get_up" blend_set="all"/>
+			<anim name="or12_gogo" 									file="anims/fps/or12/or12_gogo" blend_set="all"/>
+			<anim name="or12_tased" 									file="anims/fps/or12/or12_tased" blend_set="all"/>
+			<anim name="or12_tased_boost" 							file="anims/fps/or12/or12_tased_boost" blend_set="all"/>
+			<anim name="or12_tased_exit" 							file="anims/fps/or12/or12_tased_exit" blend_set="all"/>
+			<anim name="or12_inspect" 								file="anims/fps/or12/or12_inspect" blend_set="all"/>
+		</target>
+	</tweak>
+</tweaks>

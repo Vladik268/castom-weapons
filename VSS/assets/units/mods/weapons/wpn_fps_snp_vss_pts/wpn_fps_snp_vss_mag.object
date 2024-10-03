@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_snp_vss_mag" orientation_object="rp_vss"/>
+	<graphics>
+		<object name="g_bullet_1" enabled="true"/>
+		<object name="g_bullet_2" enabled="true"/>
+		<object name="g_bullet_3" enabled="true"/>
+		<object name="g_mag10" enabled="true"/>
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<unit type="wpn" slot="1">
+    <object file="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_snp_vss_stock"/>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data"/>
+    </extensions>
+</unit>

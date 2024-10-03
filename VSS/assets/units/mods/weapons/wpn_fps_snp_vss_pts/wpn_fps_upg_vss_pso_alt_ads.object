@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_snp_vss_pts/wpn_fps_upg_vss_pso_alt" orientation_object="rp_vss"/>
+	<graphics>
+		<object name="g_lens_front_solid" enabled="true"/>
+		<object name="g_lens_rear" enabled="true"/>
+		<object name="g_pso1_ads" enabled="true"/>
+		<object name="g_reticle" enabled="true"/>
+	</graphics>
+</dynamic_object>

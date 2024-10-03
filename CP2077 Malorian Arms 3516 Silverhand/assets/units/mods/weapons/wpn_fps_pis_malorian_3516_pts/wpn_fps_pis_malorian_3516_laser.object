@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_laser" materials="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_laser" />
+    <graphics>
+
+        <object enabled="false" name="g_indicator" />
+        <object enabled="false" name="g_laser" />
+    </graphics>
+</dynamic_object>

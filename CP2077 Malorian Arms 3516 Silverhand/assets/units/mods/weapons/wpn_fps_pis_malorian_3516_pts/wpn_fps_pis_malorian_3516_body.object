@@ -1,0 +1,39 @@
+<dynamic_object>
+    <diesel materials="units/mods/weapons/wpn_fps_pis_malorian_3516_pts/wpn_fps_pis_malorian_3516_body" orientation_object="rp_body"/>
+     <animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" enabled="true" />
+			<object name="anim_speen_reload" enabled="true" />
+			<object name="anim_feeder_reload" enabled="true" />
+			<object name="anim_bullet_reload" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_right">
+			<object name="anim_bolt_reload_right" enabled="true" />
+		</animation_group>
+		<animation_group name="reload_left">
+			<object name="anim_bolt_reload_left" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_bolt_recoil" enabled="true" />
+			<object name="anim_speen_recoil" enabled="true" />
+		</animation_group>
+		<animation_group name="last_recoil">
+			<object name="anim_bolt_last_recoil" enabled="true" />
+			<object name="anim_speen_recoil_last" enabled="true" />
+		</animation_group>
+		<animation_group name="inspect">
+			<object name="anim_speen_inspect" enabled="true" />
+			<object name="anim_bolt_inspect" enabled="true" />
+		</animation_group>
+    </animations>
+	<graphics>
+
+        <object enabled="true" name="g_malorian_frame" />
+		<object enabled="true" name="g_malorian_trigger" />
+		<object enabled="true" name="g_malorian_slide" />
+		<object enabled="true" name="g_malorian_bolt" />
+		<object enabled="true" name="g_malorian_feeder" />
+		<object enabled="true" name="g_malorian_bullet" />
+		
+    </graphics>
+</dynamic_object>

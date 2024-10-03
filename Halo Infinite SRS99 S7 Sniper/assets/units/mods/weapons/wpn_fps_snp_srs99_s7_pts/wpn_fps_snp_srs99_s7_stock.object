@@ -1,0 +1,9 @@
+<dynamic_object>
+    <diesel orientation_object="rp_grip" materials="units/mods/weapons/wpn_fps_snp_srs99_s7_pts/wpn_fps_snp_srs99_s7_stock"/>
+    <graphics>
+        <object enabled="true" name="g_s7_rear_lower"/>
+		<object enabled="true" name="g_s7_chinrest"/>
+		<object enabled="true" name="g_s7_rear_upper"/>
+		<object enabled="true" name="g_s7_stock_pad"/>
+    </graphics>
+</dynamic_object>
